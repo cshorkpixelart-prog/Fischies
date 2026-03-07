@@ -44,9 +44,143 @@ HEARTBEAT_MAX_JUMP_PX := 70
 LAST_HEARTBEAT_X := 0
 LAST_CATCH_LEARNING_METRICS := false
 
+
+CATCH_SCAN_LINE_CONFIGURED := false
+CATCH_SCAN_LINE := {x1: 234, y: 513, x2: 565}
+CATCH_SCAN_AREA := {x1: 234, y1: 502, x2: 565, y2: 517}
+CATCH_SCAN_COLOR_VARIATION := 56
+CATCH_SCAN_DEBUG_ENABLED := false
+CATCH_SCAN_COLOR_SET := ["0xEA0092", "0x7A7879", "0x000000", "0x202020"]
+
+configureCatchScanLineBeforeStart() {
+    global CATCH_SCAN_LINE_CONFIGURED, CATCH_SCAN_LINE, CATCH_SCAN_AREA, CATCH_BAR, CATCH_BAR_TOP_LINE, CATCH_BAR_ARROW_LINE
+
+    activateRoblox()
+    WinGetClientPos &winX, &winY, , , "ahk_exe RobloxPlayerBeta.exe"
+
+    previewW := CATCH_SCAN_AREA.x2 - CATCH_SCAN_AREA.x1 + 1
+    previewH := CATCH_SCAN_AREA.y2 - CATCH_SCAN_AREA.y1 + 1
+    if previewW < 120
+        previewW := 320
+    if previewH < 12
+        previewH := 16
+
+    guiX := winX + CATCH_SCAN_AREA.x1
+    guiY := winY + CATCH_SCAN_AREA.y1
+
+    overlay := Gui("+AlwaysOnTop +ToolWindow +Border", "Catch Scan Setup")
+    overlay.BackColor := "1C1230"
+    overlay.MarginX := 0
+    overlay.MarginY := 0
+    overlay.AddText("xm ym w" previewW " h" previewH " Background5E2CA5")
+    midY := Round(previewH / 2)
+    overlay.AddText("x0 y" midY " w" previewW " h1 BackgroundFFFFFF")
+    overlay.Show("x" guiX " y" guiY " w" previewW " h" previewH)
+
+    info := Gui("+AlwaysOnTop +ToolWindow", "Catch Scan Setup Controls")
+    setGuiDarkBase(info)
+    info.SetFont("s10 cEAEAEA", "Segoe UI")
+    info.AddText("xm ym", "Drag the purple box onto the catch bar area.")
+    info.AddText("xm y+6", "White line = 1px scan line used for fish detection.")
+    info.AddText("xm y+8", "Press Enter to confirm. Press Escape to exit macro.")
+    applyGuiDarkTheme(info)
+    info.Show("AutoSize x" (winX + 10) " y" (winY + 10))
+
+    ih := InputHook("L0 V")
+    ih.KeyOpt("{Enter}{Escape}", "E")
+    ih.Start()
+    ih.Wait()
+
+    if ih.EndKey = "Escape" {
+        try info.Destroy()
+        try overlay.Destroy()
+        ExitApp
+    }
+
+    WinGetPos &boxX, &boxY, &boxW, &boxH, overlay.Hwnd
+    localX1 := boxX - winX
+    localY1 := boxY - winY
+    localX2 := localX1 + boxW - 1
+    localY2 := localY1 + boxH - 1
+    lineY := localY1 + Round((boxH - 1) / 2)
+
+    CATCH_SCAN_AREA := {x1: localX1, y1: localY1, x2: localX2, y2: localY2}
+    CATCH_SCAN_LINE := {x1: localX1, y: lineY, x2: localX2}
+
+    CATCH_BAR := {x1: localX1, y1: localY1, x2: localX2, y2: localY2, xLeft: localX1, xRight: localX2}
+    CATCH_BAR_TOP_LINE := {x1: localX1, y1: lineY, x2: localX2, y2: lineY}
+    CATCH_BAR_ARROW_LINE := {x1: localX1, y1: lineY, x2: localX2, y2: lineY}
+
+    CATCH_SCAN_LINE_CONFIGURED := true
+    IniWrite(localX1, A_ScriptDir "\info.ini", "", "CatchScanX1")
+    IniWrite(localY1, A_ScriptDir "\info.ini", "", "CatchScanY1")
+    IniWrite(localX2, A_ScriptDir "\info.ini", "", "CatchScanX2")
+    IniWrite(localY2, A_ScriptDir "\info.ini", "", "CatchScanY2")
+
+    try info.Destroy()
+    try overlay.Destroy()
+}
+
+
+ensureCatchScanConfigured() {
+    global CATCH_SCAN_LINE_CONFIGURED
+
+    if CATCH_SCAN_LINE_CONFIGURED
+        return
+
+    if applySavedCatchScanArea() {
+        CATCH_SCAN_LINE_CONFIGURED := true
+        return
+    }
+
+    configureCatchScanLineBeforeStart()
+}
+
+applySavedCatchScanArea() {
+    global CATCH_SCAN_AREA, CATCH_SCAN_LINE, CATCH_BAR, CATCH_BAR_TOP_LINE, CATCH_BAR_ARROW_LINE
+
+    x1 := parseOptionalNumber(getInfoConfigValue("CatchScanX1", ""), "")
+    y1 := parseOptionalNumber(getInfoConfigValue("CatchScanY1", ""), "")
+    x2 := parseOptionalNumber(getInfoConfigValue("CatchScanX2", ""), "")
+    y2 := parseOptionalNumber(getInfoConfigValue("CatchScanY2", ""), "")
+
+    if x1 = "" || y1 = "" || x2 = "" || y2 = ""
+        return false
+    if x2 <= x1 || y2 <= y1
+        return false
+
+    lineY := y1 + Round((y2 - y1) / 2)
+    CATCH_SCAN_AREA := {x1: Round(x1), y1: Round(y1), x2: Round(x2), y2: Round(y2)}
+    CATCH_SCAN_LINE := {x1: Round(x1), y: Round(lineY), x2: Round(x2)}
+    CATCH_BAR := {x1: Round(x1), y1: Round(y1), x2: Round(x2), y2: Round(y2), xLeft: Round(x1), xRight: Round(x2)}
+    CATCH_BAR_TOP_LINE := {x1: Round(x1), y1: Round(lineY), x2: Round(x2), y2: Round(lineY)}
+    CATCH_BAR_ARROW_LINE := {x1: Round(x1), y1: Round(lineY), x2: Round(x2), y2: Round(lineY)}
+    return true
+}
+
+createCatchScanDebugPins() {
+    global CATCH_SCAN_DEBUG_ENABLED, CATCH_SCAN_AREA, CATCH_SCAN_LINE
+
+    if !CATCH_SCAN_DEBUG_ENABLED
+        return false
+
+    WinGetClientPos &winX, &winY, , , "ahk_exe RobloxPlayerBeta.exe"
+    areaPin := Pin(winX + CATCH_SCAN_AREA.x1, winY + CATCH_SCAN_AREA.y1, winX + CATCH_SCAN_AREA.x2, winY + CATCH_SCAN_AREA.y2, 60000, "b1 flash0 c8a2be2")
+    linePin := Pin(winX + CATCH_SCAN_LINE.x1, winY + CATCH_SCAN_LINE.y, winX + CATCH_SCAN_LINE.x2, winY + CATCH_SCAN_LINE.y, 60000, "b1 flash0 cffffff")
+    return {area: areaPin, line: linePin}
+}
+
+destroyCatchScanDebugPins(pins) {
+    if !IsObject(pins)
+        return
+    try pins.area.Destroy()
+    try pins.line.Destroy()
+}
+
 catchFish() {
     global
 
+    ensureCatchScanConfigured()
     WinGetClientPos &ROBLOX_X, &ROBLOX_Y, , , "ahk_exe RobloxPlayerBeta.exe"
     learning := createCatchLearningMetrics()
     loopStartTick := A_TickCount
@@ -76,6 +210,8 @@ catchFish() {
     lastStrongSignalTick := loopStartTick
     lastTick := A_TickCount
     breakReason := ""
+
+    debugPins := createCatchScanDebugPins()
 
     updateStatus("Catching: loop")
     Loop {
@@ -197,6 +333,7 @@ catchFish() {
     }
 
     releaseControl(state)
+    destroyCatchScanDebugPins(debugPins)
     finalizeCatchLearningMetrics(learning, loopStartTick)
     if breakReason = ""
         breakReason := "loop_end"
@@ -642,7 +779,17 @@ clampValue(value, minValue, maxValue) {
 }
 
 findFishIndicatorX(search, &xFish) {
-    global CALIBRATION_FISH_COLOR, CALIBRATION_FISH_TOLERANCE
+    global CATCH_SCAN_COLOR_SET, CATCH_SCAN_COLOR_VARIATION, CALIBRATION_FISH_COLOR, CALIBRATION_FISH_TOLERANCE
+
+    if IsObject(CATCH_SCAN_COLOR_SET) {
+        for _, color in CATCH_SCAN_COLOR_SET {
+            if PixelSearch(&foundX, &Y, search.x1, search.y1, search.x2, search.y2, color, CATCH_SCAN_COLOR_VARIATION) {
+                xFish := foundX
+                return true
+            }
+        }
+    }
+
     if PixelSearch(&foundX, &Y, search.x1, search.y1, search.x2, search.y2, CALIBRATION_FISH_COLOR, CALIBRATION_FISH_TOLERANCE) {
         xFish := foundX
         return true

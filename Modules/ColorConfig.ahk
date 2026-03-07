@@ -286,7 +286,7 @@ applyColorConfigFromPreset(path) {
 
 applyCatchColorConfig(cfg) {
     global CATCH_ARROW_COLOR, CATCH_ARROW_TOLERANCE, CALIBRATION_FISH_COLOR, CALIBRATION_FISH_TOLERANCE
-    global HEARTBEAT_MARKER_COLOR, HEARTBEAT_MARKER_TOLERANCE
+    global HEARTBEAT_MARKER_COLOR, HEARTBEAT_MARKER_TOLERANCE, CATCH_SCAN_COLOR_SET, CATCH_SCAN_COLOR_VARIATION, CATCH_SCAN_DEBUG_ENABLED
 
     CATCH_ARROW_COLOR := cfg["IndicatorArrowColor"]
     CATCH_ARROW_TOLERANCE := cfg["IndicatorArrowTolerance"]
@@ -296,6 +296,15 @@ applyCatchColorConfig(cfg) {
     ; Use the left box color as the heartbeat marker in catch bar mode.
     HEARTBEAT_MARKER_COLOR := cfg["BoxLeftColor"]
     HEARTBEAT_MARKER_TOLERANCE := cfg["BoxTolerance"]
+
+    CATCH_SCAN_COLOR_SET := [
+        cfg["TargetLineColor"],
+        cfg["IndicatorArrowColor"],
+        cfg["BoxLeftColor"],
+        cfg["BoxRightColor"]
+    ]
+    CATCH_SCAN_COLOR_VARIATION := Max(cfg["TargetLineTolerance"], cfg["IndicatorArrowTolerance"], cfg["BoxTolerance"])
+    CATCH_SCAN_DEBUG_ENABLED := StrLower(Trim(getInfoConfigValue("CatchScanDebug", "false"))) = "true"
 }
 
 readColorPresetFile(path) {

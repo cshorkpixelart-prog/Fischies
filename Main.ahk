@@ -71,6 +71,7 @@ runMacro() {
     ;displayMainGui()
     resizeRobloxWindow()
     disableResizing()
+    ensureCatchScanConfigured()
     openSetupGuiAtRun()
     updateStatus("Finish setup in GUI, then press F1.")
     logEvent("Macro bootstrap complete.")
