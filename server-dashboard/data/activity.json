@@ -1,0 +1,94 @@
+[
+  {
+    "id": "f151f652d4f9",
+    "type": "login",
+    "message": "Makoral.Dev logged in",
+    "actor": "Makoral.Dev",
+    "meta": {},
+    "createdAt": "2026-02-24T19:18:23Z"
+  },
+  {
+    "id": "f8082662a97f",
+    "type": "login",
+    "message": "Makoral.Dev logged in",
+    "actor": "Makoral.Dev",
+    "meta": {},
+    "createdAt": "2026-02-24T19:12:47Z"
+  },
+  {
+    "id": "09e4ca649edd",
+    "type": "feedback_updated",
+    "message": "Updated feedback d42e9c6dba97",
+    "actor": "Makoral.Dev",
+    "meta": {
+      "feedbackId": "d42e9c6dba97"
+    },
+    "createdAt": "2026-02-20T09:31:39Z"
+  },
+  {
+    "id": "7455519acafd",
+    "type": "feedback_updated",
+    "message": "Updated feedback d42e9c6dba97",
+    "actor": "Makoral.Dev",
+    "meta": {
+      "feedbackId": "d42e9c6dba97"
+    },
+    "createdAt": "2026-02-20T09:31:03Z"
+  },
+  {
+    "id": "cc822847103c",
+    "type": "client_feedback",
+    "message": "Client feedback received (Suggestion)",
+    "actor": "Fisch",
+    "meta": {},
+    "createdAt": "2026-02-20T09:30:48Z"
+  },
+  {
+    "id": "d28ddf95fb76",
+    "type": "feedback_updated",
+    "message": "Updated feedback mlsb5s3j-b2ecbe",
+    "actor": "Makoral.Dev",
+    "meta": {
+      "feedbackId": "mlsb5s3j-b2ecbe"
+    },
+    "createdAt": "2026-02-20T09:19:08Z"
+  },
+  {
+    "id": "ab7ca5a5a004",
+    "type": "feedback_updated",
+    "message": "Updated feedback mlsb5s3j-b2ecbe",
+    "actor": "Makoral.Dev",
+    "meta": {
+      "feedbackId": "mlsb5s3j-b2ecbe"
+    },
+    "createdAt": "2026-02-20T09:19:04Z"
+  },
+  {
+    "id": "5e95e381669f",
+    "type": "feedback_updated",
+    "message": "Updated feedback mlsb5s3j-b2ecbe",
+    "actor": "Makoral.Dev",
+    "meta": {
+      "feedbackId": "mlsb5s3j-b2ecbe"
+    },
+    "createdAt": "2026-02-20T09:19:04Z"
+  },
+  {
+    "id": "6ecf127acdae",
+    "type": "feedback_updated",
+    "message": "Updated feedback mlsb5s3j-b2ecbe",
+    "actor": "Makoral.Dev",
+    "meta": {
+      "feedbackId": "mlsb5s3j-b2ecbe"
+    },
+    "createdAt": "2026-02-20T09:18:37Z"
+  },
+  {
+    "id": "141fc4fefb9d",
+    "type": "login",
+    "message": "Makoral.Dev logged in",
+    "actor": "Makoral.Dev",
+    "meta": {},
+    "createdAt": "2026-02-20T09:18:36Z"
+  }
+]

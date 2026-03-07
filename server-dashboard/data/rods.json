@@ -1,0 +1,3782 @@
+﻿[
+    {
+        "name":  "Abyssal Specter Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  25,
+                      "luck":  90,
+                      "control":  0.22,
+                      "resilience":  15,
+                      "maxKg":  100000
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Adventurer\u0027s Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  10,
+                      "luck":  25,
+                      "control":  0.2,
+                      "resilience":  5,
+                      "maxKg":  20000
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Antler Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  null,
+                      "luck":  null,
+                      "control":  null,
+                      "resilience":  null,
+                      "maxKg":  null
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Arctic Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  45,
+                      "luck":  65,
+                      "control":  0.12,
+                      "resilience":  10,
+                      "maxKg":  80000
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Astral Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  null,
+                      "luck":  null,
+                      "control":  null,
+                      "resilience":  null,
+                      "maxKg":  null
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Astralhook Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  50,
+                      "luck":  195,
+                      "control":  0.1,
+                      "resilience":  10,
+                      "maxKg":  200000
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Auric Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  15,
+                      "luck":  85,
+                      "control":  0.1,
+                      "resilience":  15,
+                      "maxKg":  200000
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Aurora Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  10,
+                      "luck":  65,
+                      "control":  0.06,
+                      "resilience":  6,
+                      "maxKg":  6000
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Avalanche Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  40,
+                      "luck":  90,
+                      "control":  -0.08,
+                      "resilience":  10,
+                      "maxKg":  65000
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Azure Of Lagoon Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  30,
+                      "luck":  105,
+                      "control":  0.1,
+                      "resilience":  5,
+                      "maxKg":  150000
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Blazebringer Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  55,
+                      "luck":  90,
+                      "control":  0.2,
+                      "resilience":  15,
+                      "maxKg":  50000
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Brick Built Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  null,
+                      "luck":  null,
+                      "control":  null,
+                      "resilience":  null,
+                      "maxKg":  null
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Brick Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  -5,
+                      "luck":  75,
+                      "control":  0.125,
+                      "resilience":  20,
+                      "maxKg":  10000
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Brother\u0027s Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  25,
+                      "luck":  15,
+                      "control":  0.1,
+                      "resilience":  5,
+                      "maxKg":  4000
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Buddy Bond Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  null,
+                      "luck":  null,
+                      "control":  null,
+                      "resilience":  null,
+                      "maxKg":  null
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Candy Cane Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  null,
+                      "luck":  null,
+                      "control":  null,
+                      "resilience":  null,
+                      "maxKg":  null
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Carbon Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  -10,
+                      "luck":  25,
+                      "control":  0.05,
+                      "resilience":  10,
+                      "maxKg":  600
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Carrot Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  85,
+                      "luck":  125,
+                      "control":  0.2,
+                      "resilience":  15,
+                      "maxKg":  50000
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Celestial Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  null,
+                      "luck":  null,
+                      "control":  null,
+                      "resilience":  null,
+                      "maxKg":  null
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Challenger\u0027s Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  null,
+                      "luck":  null,
+                      "control":  null,
+                      "resilience":  null,
+                      "maxKg":  null
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Champions Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  65,
+                      "luck":  85,
+                      "control":  0.25,
+                      "resilience":  30,
+                      "maxKg":  200000
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Clickbait Caster Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  35,
+                      "luck":  60,
+                      "control":  0.2,
+                      "resilience":  15,
+                      "maxKg":  50000
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Crystalized Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  null,
+                      "luck":  null,
+                      "control":  null,
+                      "resilience":  null,
+                      "maxKg":  null
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Depthseeker Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  null,
+                      "luck":  null,
+                      "control":  null,
+                      "resilience":  null,
+                      "maxKg":  null
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Destiny Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  10,
+                      "luck":  250,
+                      "control":  0,
+                      "resilience":  0,
+                      "maxKg":  8000
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Egg Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  null,
+                      "luck":  null,
+                      "control":  null,
+                      "resilience":  null,
+                      "maxKg":  null
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Ethereal Prism Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  null,
+                      "luck":  null,
+                      "control":  null,
+                      "resilience":  null,
+                      "maxKg":  null
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Event Horizon Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  null,
+                      "luck":  null,
+                      "control":  null,
+                      "resilience":  null,
+                      "maxKg":  null
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Fallen Snowblade",
+        "active":  true,
+        "stats":  {
+                      "lure":  null,
+                      "luck":  null,
+                      "control":  null,
+                      "resilience":  null,
+                      "maxKg":  null
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Fang of the Eclipse Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  95,
+                      "luck":  220,
+                      "control":  0.25,
+                      "resilience":  40,
+                      "maxKg":  2000000
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Fast Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  45,
+                      "luck":  -15,
+                      "control":  0.05,
+                      "resilience":  0,
+                      "maxKg":  175
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Firefly Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  50,
+                      "luck":  35,
+                      "control":  0.2,
+                      "resilience":  0,
+                      "maxKg":  10000
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Firework Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  null,
+                      "luck":  null,
+                      "control":  null,
+                      "resilience":  null,
+                      "maxKg":  null
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Fischer\u0027s Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  10,
+                      "luck":  20,
+                      "control":  0.05,
+                      "resilience":  5,
+                      "maxKg":  150
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Fischmas Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  null,
+                      "luck":  null,
+                      "control":  null,
+                      "resilience":  null,
+                      "maxKg":  null
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Fish Photographer Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  85,
+                      "luck":  150,
+                      "control":  0.08,
+                      "resilience":  15,
+                      "maxKg":  500000
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Fixer\u0027s Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  null,
+                      "luck":  null,
+                      "control":  null,
+                      "resilience":  null,
+                      "maxKg":  null
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Flimsy Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  0,
+                      "luck":  0,
+                      "control":  0,
+                      "resilience":  0,
+                      "maxKg":  10.4
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Fortune Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  null,
+                      "luck":  null,
+                      "control":  null,
+                      "resilience":  null,
+                      "maxKg":  null
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Free Spirit Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  60,
+                      "luck":  150,
+                      "control":  0.2,
+                      "resilience":  15,
+                      "maxKg":  500000
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Friendly Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  80,
+                      "luck":  120,
+                      "control":  0.25,
+                      "resilience":  50,
+                      "maxKg":  "inf"
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Frog Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  20,
+                      "luck":  100,
+                      "control":  0.25,
+                      "resilience":  5,
+                      "maxKg":  25000
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Frost Warden Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  null,
+                      "luck":  null,
+                      "control":  null,
+                      "resilience":  null,
+                      "maxKg":  null
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Frostfire Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  null,
+                      "luck":  null,
+                      "control":  null,
+                      "resilience":  null,
+                      "maxKg":  null
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Fungal Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  null,
+                      "luck":  null,
+                      "control":  null,
+                      "resilience":  null,
+                      "maxKg":  null
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Great Dreamer Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  65,
+                      "luck":  95,
+                      "control":  0.12,
+                      "resilience":  20,
+                      "maxKg":  100000
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Great Rod of Oscar",
+        "active":  true,
+        "stats":  {
+                      "lure":  95,
+                      "luck":  280,
+                      "control":  0.1,
+                      "resilience":  -5,
+                      "maxKg":  2000000
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Haunted Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  null,
+                      "luck":  null,
+                      "control":  null,
+                      "resilience":  null,
+                      "maxKg":  null
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Heaven\u0027s Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  30,
+                      "luck":  225,
+                      "control":  0.2,
+                      "resilience":  30,
+                      "maxKg":  30000
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Ice Warpers Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  65,
+                      "luck":  85,
+                      "control":  0.25,
+                      "resilience":  35,
+                      "maxKg":  1000000
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Kings Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  55,
+                      "luck":  55,
+                      "control":  0.15,
+                      "resilience":  10,
+                      "maxKg":  7500
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Kraken Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  55,
+                      "luck":  185,
+                      "control":  0.2,
+                      "resilience":  15,
+                      "maxKg":  115000
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Krampus\u0027s Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  null,
+                      "luck":  null,
+                      "control":  null,
+                      "resilience":  null,
+                      "maxKg":  null
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Leviathan\u0027s Fang Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  null,
+                      "luck":  null,
+                      "control":  null,
+                      "resilience":  null,
+                      "maxKg":  null
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Lobster Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  45,
+                      "luck":  75,
+                      "control":  0.1,
+                      "resilience":  20,
+                      "maxKg":  200000
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Long Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  0,
+                      "luck":  30,
+                      "control":  0.05,
+                      "resilience":  0,
+                      "maxKg":  2500
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Lucky Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  20,
+                      "luck":  60,
+                      "control":  -0.12,
+                      "resilience":  0,
+                      "maxKg":  175
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Magma Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  null,
+                      "luck":  null,
+                      "control":  null,
+                      "resilience":  null,
+                      "maxKg":  null
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Magnet Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  null,
+                      "luck":  null,
+                      "control":  null,
+                      "resilience":  null,
+                      "maxKg":  null
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Merchant Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  20,
+                      "luck":  75,
+                      "control":  0.1,
+                      "resilience":  15,
+                      "maxKg":  5000
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Midas Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  0,
+                      "luck":  60,
+                      "control":  0.15,
+                      "resilience":  0,
+                      "maxKg":  100000
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Mission Specialist\u0027s Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  -20,
+                      "luck":  20,
+                      "control":  0.2,
+                      "resilience":  5,
+                      "maxKg":  5000
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Mythical Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  0,
+                      "luck":  45,
+                      "control":  0.05,
+                      "resilience":  0,
+                      "maxKg":  2000
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "nilCaster",
+        "active":  true,
+        "stats":  {
+                      "lure":  0,
+                      "luck":  -10,
+                      "control":  0,
+                      "resilience":  0,
+                      "maxKg":  1000
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "No-Life Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  90,
+                      "luck":  105,
+                      "control":  0.23,
+                      "resilience":  10,
+                      "maxKg":  10000
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Nocturnal Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  null,
+                      "luck":  null,
+                      "control":  null,
+                      "resilience":  null,
+                      "maxKg":  null
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "North-Star Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  null,
+                      "luck":  null,
+                      "control":  null,
+                      "resilience":  null,
+                      "maxKg":  null
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Onirifalx",
+        "active":  true,
+        "stats":  {
+                      "lure":  null,
+                      "luck":  null,
+                      "control":  null,
+                      "resilience":  null,
+                      "maxKg":  null
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Paintbrush",
+        "active":  true,
+        "stats":  {
+                      "lure":  95,
+                      "luck":  150,
+                      "control":  -0.1,
+                      "resilience":  10,
+                      "maxKg":  1000000
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Paleontologist\u0027s Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  -10,
+                      "luck":  25,
+                      "control":  0.1,
+                      "resilience":  10,
+                      "maxKg":  5000
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Phoenix Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  55,
+                      "luck":  75,
+                      "control":  0.12,
+                      "resilience":  15,
+                      "maxKg":  100000
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Plastic Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  10,
+                      "luck":  5,
+                      "control":  0.05,
+                      "resilience":  0,
+                      "maxKg":  100
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Poseidon Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  null,
+                      "luck":  null,
+                      "control":  null,
+                      "resilience":  null,
+                      "maxKg":  null
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Precision Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  null,
+                      "luck":  null,
+                      "control":  null,
+                      "resilience":  null,
+                      "maxKg":  null
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Rapid Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  null,
+                      "luck":  null,
+                      "control":  null,
+                      "resilience":  null,
+                      "maxKg":  null
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Reinforced Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  0,
+                      "luck":  0,
+                      "control":  0.05,
+                      "resilience":  0,
+                      "maxKg":  2000
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Relic Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  null,
+                      "luck":  null,
+                      "control":  null,
+                      "resilience":  null,
+                      "maxKg":  null
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Resourceful Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  20,
+                      "luck":  75,
+                      "control":  0.1,
+                      "resilience":  5,
+                      "maxKg":  5000
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Riptide Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  null,
+                      "luck":  null,
+                      "control":  null,
+                      "resilience":  null,
+                      "maxKg":  null
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Rod Of The Depths",
+        "active":  true,
+        "stats":  {
+                      "lure":  20,
+                      "luck":  130,
+                      "control":  0.15,
+                      "resilience":  8,
+                      "maxKg":  30000
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Rod Of The Eternal King",
+        "active":  true,
+        "stats":  {
+                      "lure":  null,
+                      "luck":  null,
+                      "control":  null,
+                      "resilience":  null,
+                      "maxKg":  null
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Rod Of The Exalted One",
+        "active":  true,
+        "stats":  {
+                      "lure":  25,
+                      "luck":  130,
+                      "control":  0.2,
+                      "resilience":  10,
+                      "maxKg":  75000
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Rod Of The Forgotten Fang",
+        "active":  true,
+        "stats":  {
+                      "lure":  null,
+                      "luck":  null,
+                      "control":  null,
+                      "resilience":  null,
+                      "maxKg":  null
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Rod Of The Zenith",
+        "active":  true,
+        "stats":  {
+                      "lure":  null,
+                      "luck":  null,
+                      "control":  null,
+                      "resilience":  null,
+                      "maxKg":  null
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Rod Of Time",
+        "active":  true,
+        "stats":  {
+                      "lure":  null,
+                      "luck":  null,
+                      "control":  null,
+                      "resilience":  null,
+                      "maxKg":  null
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Scurvy Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  0,
+                      "luck":  50,
+                      "control":  0.15,
+                      "resilience":  15,
+                      "maxKg":  2000
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Seasons Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  null,
+                      "luck":  null,
+                      "control":  null,
+                      "resilience":  null,
+                      "maxKg":  null
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Seraphic Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  null,
+                      "luck":  null,
+                      "control":  null,
+                      "resilience":  null,
+                      "maxKg":  null
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Shamrock Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  null,
+                      "luck":  null,
+                      "control":  null,
+                      "resilience":  null,
+                      "maxKg":  null
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Sovereign Doombringer Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  10,
+                      "luck":  160,
+                      "control":  0.2,
+                      "resilience":  20,
+                      "maxKg":  200000
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Steady Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  null,
+                      "luck":  null,
+                      "control":  null,
+                      "resilience":  null,
+                      "maxKg":  null
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Stone Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  -25,
+                      "luck":  40,
+                      "control":  0.05,
+                      "resilience":  5,
+                      "maxKg":  2000
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Summit Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  15,
+                      "luck":  110,
+                      "control":  0.18,
+                      "resilience":  15,
+                      "maxKg":  200000
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Sunken Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  0,
+                      "luck":  150,
+                      "control":  0.1,
+                      "resilience":  5,
+                      "maxKg":  5000
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Superstar Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  null,
+                      "luck":  null,
+                      "control":  null,
+                      "resilience":  null,
+                      "maxKg":  null
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Tempest Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  40,
+                      "luck":  105,
+                      "control":  0.15,
+                      "resilience":  5,
+                      "maxKg":  25000
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "The Lost Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  15,
+                      "luck":  90,
+                      "control":  0.08,
+                      "resilience":  15,
+                      "maxKg":  45000
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Training Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  -5,
+                      "luck":  15,
+                      "control":  0.2,
+                      "resilience":  -5,
+                      "maxKg":  200
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Treasure Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  -10,
+                      "luck":  95,
+                      "control":  0.15,
+                      "resilience":  5,
+                      "maxKg":  20000
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Trident Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  0,
+                      "luck":  150,
+                      "control":  0,
+                      "resilience":  0,
+                      "maxKg":  6000
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Tryhard Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  50,
+                      "luck":  100,
+                      "control":  0.1,
+                      "resilience":  20,
+                      "maxKg":  200000
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Verdant Shear Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  20,
+                      "luck":  100,
+                      "control":  0.1,
+                      "resilience":  15,
+                      "maxKg":  100000
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "View Smasher Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  200,
+                      "luck":  20,
+                      "control":  0.15,
+                      "resilience":  0,
+                      "maxKg":  200000
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Volcanic Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  null,
+                      "luck":  null,
+                      "control":  null,
+                      "resilience":  null,
+                      "maxKg":  null
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Voyager Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  null,
+                      "luck":  null,
+                      "control":  null,
+                      "resilience":  null,
+                      "maxKg":  null
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Wildflower Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  70,
+                      "luck":  45,
+                      "control":  0.15,
+                      "resilience":  5,
+                      "maxKg":  5000
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Wisdom Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  20,
+                      "luck":  90,
+                      "control":  0.2,
+                      "resilience":  0,
+                      "maxKg":  7000
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    },
+    {
+        "name":  "Zeus Rod",
+        "active":  true,
+        "stats":  {
+                      "lure":  70,
+                      "luck":  70,
+                      "control":  0.15,
+                      "resilience":  10,
+                      "maxKg":  35000
+                  },
+        "catching":  {
+                         "centerRatio":  0.35,
+                         "lookaheadMs":  60,
+                         "brakeSpeed":  0.95,
+                         "deadzonePx":  3,
+                         "fishVelocitySmoothing":  0.45,
+                         "barVelocitySmoothing":  0.4
+                     },
+        "notes":  "",
+        "passiveInfo":  "",
+        "tutorialUrl":  "",
+        "learning":  {
+                         "sampleCount":  0,
+                         "successCount":  0,
+                         "failureCount":  0,
+                         "popupDetectedCount":  0,
+                         "rollingAvgErrorPx":  null,
+                         "multicolorRatio":  null,
+                         "lastOutcome":  "",
+                         "lastClientAt":  "",
+                         "lastMergedAt":  ""
+                     },
+        "createdAt":  "2026-02-24T18:51:57Z",
+        "updatedAt":  "2026-02-18T16:51:45.602Z"
+    }
+]

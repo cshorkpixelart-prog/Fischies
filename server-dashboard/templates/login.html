@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fisch Dashboard Login</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body class="login-page">
+    <main class="login-shell">
+      <section class="login-card">
+        <h1>Fisch Control Hub</h1>
+        <p>Sign in to access rods, feedback inbox, chat channels, and user controls.</p>
+        <form method="post" action="/login" class="login-form">
+          <label>
+            Username
+            <input type="text" name="username" autocomplete="username" required />
+          </label>
+          <label>
+            Password
+            <input type="password" name="password" autocomplete="current-password" required />
+          </label>
+          {% if error %}
+          <p class="error-text">{{ error }}</p>
+          {% endif %}
+          <button type="submit" class="primary-btn">Sign In</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

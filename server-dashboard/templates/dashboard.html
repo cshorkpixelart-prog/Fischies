@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fisch Control Hub</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body
+    class="dashboard-page"
+    data-username="{{ user.username }}"
+    data-role="{{ user.role }}"
+  >
+    <header class="topbar">
+      <div class="topbar-brand">
+        <h1>Fisch Control Hub</h1>
+        <p>Dark-mode operations for rods, feedback, users, and channels.</p>
+      </div>
+      <div class="topbar-meta">
+        <span class="badge">{{ user.username }} ({{ user.role }})</span>
+        <form method="post" action="/logout">
+          <button type="submit" class="ghost-btn">Log Out</button>
+        </form>
+      </div>
+    </header>
+
+    <div class="app-layout">
+      <aside class="sidebar">
+        <button type="button" class="nav-link active" data-view="overview">Overview</button>
+        <button type="button" class="nav-link" data-view="rods">Rod Tuning</button>
+        <button type="button" class="nav-link" data-view="enchants">Enchants</button>
+        <button type="button" class="nav-link" data-view="feedback">Feedback Inbox</button>
+        <button type="button" class="nav-link" data-view="chat">Team Chat</button>
+        <button
+          type="button"
+          class="nav-link {% if user.role != 'owner' %}hidden{% endif %}"
+          data-view="users"
+          id="users-nav-link"
+        >
+          User Access
+        </button>
+      </aside>
+
+      <main class="views">
+        <section class="view active" id="view-overview">
+          <div class="card-grid">
+            <article class="info-card">
+              <h3>Rods</h3>
+              <p id="sum-rods">0</p>
+            </article>
+            <article class="info-card">
+              <h3>Enchants</h3>
+              <p id="sum-enchants">0</p>
+            </article>
+            <article class="info-card">
+              <h3>Unread Feedback</h3>
+              <p id="sum-feedback-unread">0</p>
+            </article>
+            <article class="info-card">
+              <h3>Chat Channels</h3>
+              <p id="sum-channels">0</p>
+            </article>
+            <article class="info-card">
+              <h3>Chat Messages</h3>
+              <p id="sum-chat-messages">0</p>
+            </article>
+          </div>
+
+          <div class="panel-grid">
+            <section class="panel">
+              <div class="panel-head">
+                <h2>Recent Activity</h2>
+                <button id="refresh-activity" class="ghost-btn" type="button">Refresh</button>
+              </div>
+              <div id="activity-list" class="activity-list"></div>
+            </section>
+
+            <section class="panel">
+              <h2>Quick Actions</h2>
+              <div class="quick-actions">
+                <button id="quick-refresh-all" class="primary-btn" type="button">Refresh Everything</button>
+                <button id="quick-export-feedback" class="ghost-btn" type="button">Export Feedback JSON</button>
+              </div>
+              <p id="quick-status" class="muted-text"></p>
+            </section>
+          </div>
+        </section>
+
+        <section class="view" id="view-rods">
+          <section class="panel">
+            <div class="panel-head">
+              <h2>Rod Data Overview</h2>
+              <button id="reload-rods" class="ghost-btn" type="button">Reload Rods</button>
+            </div>
+            <div class="toolbar">
+              <label for="rod-search">Find rod</label>
+              <input id="rod-search" type="text" placeholder="Type to filter rods..." />
+              <input id="new-rod-name" type="text" placeholder="New rod name..." />
+              <button id="add-rod-btn" class="ghost-btn" type="button">Add Rod</button>
+              <button id="toggle-rod-active-btn" class="ghost-btn" type="button">Deactivate Rod</button>
+              <span id="rod-admin-status" class="muted-text"></span>
+            </div>
+            <div class="rod-layout">
+              <aside id="rod-tabs" class="rod-tabs"></aside>
+              <form id="rod-form" class="rod-form">
+                <h3 id="rod-form-title">Select a rod</h3>
+                <p id="rod-activity-state" class="muted-text">State: active</p>
+                <div class="form-grid">
+                  <label>Learning Samples <input id="field-learning-samples" type="text" readonly /></label>
+                  <label>Learning Success % <input id="field-learning-success-rate" type="text" readonly /></label>
+                  <label>Last Learning Outcome <input id="field-learning-last-outcome" type="text" readonly /></label>
+                </div>
+                <div class="form-grid">
+                  <label>Lure <input id="field-lure" type="number" step="0.01" /></label>
+                  <label>Luck <input id="field-luck" type="number" step="0.01" /></label>
+                  <label>Control <input id="field-control" type="number" step="0.01" /></label>
+                  <label>Resilience <input id="field-resilience" type="number" step="0.01" /></label>
+                  <label>Max Kg <input id="field-maxkg" type="text" placeholder="number or inf" /></label>
+                </div>
+                <h4>Catching Tuning</h4>
+                <div class="form-grid">
+                  <label>Center Ratio <input id="field-centerRatio" type="number" step="0.01" /></label>
+                  <label>Lookahead Ms <input id="field-lookaheadMs" type="number" step="1" /></label>
+                  <label>Brake Speed <input id="field-brakeSpeed" type="number" step="0.01" /></label>
+                  <label>Deadzone Px <input id="field-deadzonePx" type="number" step="1" /></label>
+                  <label>Fish Vel Smooth <input id="field-fishVelocitySmoothing" type="number" step="0.01" /></label>
+                  <label>Bar Vel Smooth <input id="field-barVelocitySmoothing" type="number" step="0.01" /></label>
+                </div>
+                <label>
+                  Passive Info / Ability
+                  <textarea
+                    id="field-passiveInfo"
+                    rows="3"
+                    placeholder="Describe this rod's passive behavior or ability"
+                  ></textarea>
+                </label>
+                <label>
+                  Tutorial URL
+                  <input id="field-tutorialUrl" type="url" placeholder="https://..." />
+                </label>
+                <div class="form-actions">
+                  <input
+                    id="field-tutorialFile"
+                    type="file"
+                    accept="video/mp4,video/webm,video/quicktime,.m4v"
+                  />
+                  <button id="upload-tutorial-btn" type="button" class="ghost-btn">Upload Video</button>
+                  <span id="tutorial-upload-status" class="muted-text"></span>
+                </div>
+                <label>
+                  Notes
+                  <textarea id="field-notes" rows="4" placeholder="Manual notes for this rod"></textarea>
+                </label>
+                <div class="form-actions">
+                  <button type="submit" class="primary-btn">Save Rod</button>
+                  <span id="rod-save-status" class="muted-text"></span>
+                </div>
+              </form>
+            </div>
+          </section>
+        </section>
+
+        <section class="view" id="view-enchants">
+          <section class="panel">
+            <div class="panel-head">
+              <h2>Enchant Database</h2>
+              <button id="reload-enchants" class="ghost-btn" type="button">Reload Enchants</button>
+            </div>
+            <div class="toolbar">
+              <label for="enchant-search">Find enchant</label>
+              <input id="enchant-search" type="text" placeholder="Type to filter enchants..." />
+            </div>
+            <div class="rod-layout">
+              <aside id="enchant-tabs" class="rod-tabs"></aside>
+              <form id="enchant-form" class="rod-form">
+                <h3 id="enchant-form-title">Select an enchant</h3>
+                <div class="form-grid">
+                  <label>Name <input id="field-enchant-name" type="text" required /></label>
+                  <label>
+                    Type
+                    <select id="field-enchant-type">
+                      <option value="primary">primary</option>
+                      <option value="secondary">secondary</option>
+                    </select>
+                  </label>
+                </div>
+                <label>
+                  Effect Summary
+                  <textarea id="field-enchant-effect" rows="3" placeholder="Human-readable enchant effect"></textarea>
+                </label>
+                <h4>Stat Deltas</h4>
+                <div class="form-grid">
+                  <label>Lure <input id="field-enchant-lure" type="number" step="0.01" /></label>
+                  <label>Luck <input id="field-enchant-luck" type="number" step="0.01" /></label>
+                  <label>Control <input id="field-enchant-control" type="number" step="0.01" /></label>
+                  <label>Resilience <input id="field-enchant-resilience" type="number" step="0.01" /></label>
+                  <label>Max Kg <input id="field-enchant-maxkg" type="text" placeholder="number or inf" /></label>
+                  <label>Max Kg % <input id="field-enchant-maxkgpercent" type="number" step="0.01" /></label>
+                </div>
+                <label>
+                  Notes
+                  <textarea id="field-enchant-notes" rows="3" placeholder="Optional notes"></textarea>
+                </label>
+                <div class="form-actions">
+                  <button type="submit" class="primary-btn">Save Enchant</button>
+                  <span id="enchant-save-status" class="muted-text"></span>
+                </div>
+              </form>
+            </div>
+          </section>
+        </section>
+
+        <section class="view" id="view-feedback">
+          <section class="panel">
+            <div class="panel-head">
+              <h2>Feedback Inbox</h2>
+              <button id="reload-feedback" class="ghost-btn" type="button">Reload Inbox</button>
+            </div>
+            <div class="toolbar">
+              <input id="feedback-search" type="text" placeholder="Search by message, rod, type..." />
+              <label class="switch-wrap">
+                <input id="feedback-show-archived" type="checkbox" />
+                Show archived
+              </label>
+            </div>
+            <div class="mail-layout">
+              <aside id="feedback-list" class="mail-list"></aside>
+              <article class="mail-preview">
+                <div class="mail-preview-head">
+                  <h3 id="feedback-subject">Select a message</h3>
+                  <p id="feedback-meta" class="muted-text"></p>
+                </div>
+                <p id="feedback-body" class="mail-body">
+                  Open a message from the inbox list to review details.
+                </p>
+                <div class="mail-actions">
+                  <button id="feedback-toggle-read" type="button" class="ghost-btn" disabled>Mark Read</button>
+                  <button id="feedback-toggle-archive" type="button" class="ghost-btn" disabled>Archive</button>
+                </div>
+              </article>
+            </div>
+          </section>
+        </section>
+
+        <section class="view" id="view-chat">
+          <section class="panel">
+            <div class="panel-head">
+              <h2>Channel Chat</h2>
+              <button id="reload-chat" class="ghost-btn" type="button">Reload Chat</button>
+            </div>
+            <div class="chat-layout">
+              <aside class="channel-rail">
+                <div class="panel-head compact">
+                  <h3>Channels</h3>
+                </div>
+                <div id="channel-list" class="channel-list"></div>
+                <form id="channel-create-form" class="stack-form hidden">
+                  <label>New Channel <input id="new-channel-name" type="text" placeholder="channel-name" /></label>
+                  <label>Topic <input id="new-channel-topic" type="text" placeholder="Optional topic" /></label>
+                  <button type="submit" class="ghost-btn">Create Channel</button>
+                </form>
+              </aside>
+              <article class="chat-main">
+                <h3 id="active-channel-title"># general</h3>
+                <div id="chat-messages" class="chat-messages"></div>
+                <form id="chat-send-form" class="chat-send-form">
+                  <textarea
+                    id="chat-message-input"
+                    rows="2"
+                    maxlength="2000"
+                    placeholder="Write a message..."
+                  ></textarea>
+                  <button type="submit" class="primary-btn">Send</button>
+                </form>
+              </article>
+            </div>
+          </section>
+        </section>
+
+        <section class="view {% if user.role != 'owner' %}hidden{% endif %}" id="view-users">
+          <section class="panel">
+            <h2>User Access Management</h2>
+            <form id="user-create-form" class="user-create-form">
+              <label>Username <input id="new-user-name" type="text" required /></label>
+              <label>Password <input id="new-user-pass" type="password" required /></label>
+              <label>
+                Role
+                <select id="new-user-role">
+                  <option value="viewer">viewer</option>
+                  <option value="admin">admin</option>
+                </select>
+              </label>
+              <button type="submit" class="primary-btn">Add User</button>
+            </form>
+            <div id="user-list" class="user-list"></div>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>

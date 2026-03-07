@@ -1,0 +1,302 @@
+[
+  {
+    "name": "Swift",
+    "type": "primary",
+    "effect": "+30% Lure Speed",
+    "stats": {
+      "lure": 30,
+      "luck": null,
+      "control": null,
+      "resilience": null,
+      "maxKg": null,
+      "maxKgPercent": null
+    },
+    "notes": "",
+    "updatedAt": "2026-02-23T00:00:00Z"
+  },
+  {
+    "name": "Hasty",
+    "type": "primary",
+    "effect": "+55% Lure Speed",
+    "stats": {
+      "lure": 55,
+      "luck": null,
+      "control": null,
+      "resilience": null,
+      "maxKg": null,
+      "maxKgPercent": null
+    },
+    "notes": "",
+    "updatedAt": "2026-02-23T00:00:00Z"
+  },
+  {
+    "name": "Lucky",
+    "type": "primary",
+    "effect": "+20% Luck, +15% Lure Speed",
+    "stats": {
+      "lure": 15,
+      "luck": 20,
+      "control": null,
+      "resilience": null,
+      "maxKg": null,
+      "maxKgPercent": null
+    },
+    "notes": "",
+    "updatedAt": "2026-02-23T00:00:00Z"
+  },
+  {
+    "name": "Divine",
+    "type": "primary",
+    "effect": "+45% Luck, +20% Resilience, +20% Lure Speed",
+    "stats": {
+      "lure": 20,
+      "luck": 45,
+      "control": null,
+      "resilience": 20,
+      "maxKg": null,
+      "maxKgPercent": null
+    },
+    "notes": "",
+    "updatedAt": "2026-02-23T00:00:00Z"
+  },
+  {
+    "name": "Breezed",
+    "type": "primary",
+    "effect": "+65% Luck, +10% Lure Speed",
+    "stats": {
+      "lure": 10,
+      "luck": 65,
+      "control": null,
+      "resilience": null,
+      "maxKg": null,
+      "maxKgPercent": null
+    },
+    "notes": "",
+    "updatedAt": "2026-02-23T00:00:00Z"
+  },
+  {
+    "name": "Quantum",
+    "type": "primary",
+    "effect": "+25% Luck",
+    "stats": {
+      "lure": null,
+      "luck": 25,
+      "control": null,
+      "resilience": null,
+      "maxKg": null,
+      "maxKgPercent": null
+    },
+    "notes": "",
+    "updatedAt": "2026-02-23T00:00:00Z"
+  },
+  {
+    "name": "Piercing",
+    "type": "primary",
+    "effect": "+0.2 Control",
+    "stats": {
+      "lure": null,
+      "luck": null,
+      "control": 0.2,
+      "resilience": null,
+      "maxKg": null,
+      "maxKgPercent": null
+    },
+    "notes": "",
+    "updatedAt": "2026-02-23T00:00:00Z"
+  },
+  {
+    "name": "Invincible",
+    "type": "primary",
+    "effect": "Inf Max Kg",
+    "stats": {
+      "lure": null,
+      "luck": null,
+      "control": null,
+      "resilience": null,
+      "maxKg": "inf",
+      "maxKgPercent": null
+    },
+    "notes": "",
+    "updatedAt": "2026-02-23T00:00:00Z"
+  },
+  {
+    "name": "Herculean",
+    "type": "primary",
+    "effect": "+25000 Max Kg, +0.2 Control",
+    "stats": {
+      "lure": null,
+      "luck": null,
+      "control": 0.2,
+      "resilience": null,
+      "maxKg": 25000,
+      "maxKgPercent": null
+    },
+    "notes": "",
+    "updatedAt": "2026-02-23T00:00:00Z"
+  },
+  {
+    "name": "Mystical",
+    "type": "primary",
+    "effect": "+25% Luck, +45% Resilience, +15% Lure Speed",
+    "stats": {
+      "lure": 15,
+      "luck": 25,
+      "control": null,
+      "resilience": 45,
+      "maxKg": null,
+      "maxKgPercent": null
+    },
+    "notes": "",
+    "updatedAt": "2026-02-23T00:00:00Z"
+  },
+  {
+    "name": "Resilient",
+    "type": "primary",
+    "effect": "+35% Resilience",
+    "stats": {
+      "lure": null,
+      "luck": null,
+      "control": null,
+      "resilience": 35,
+      "maxKg": null,
+      "maxKgPercent": null
+    },
+    "notes": "",
+    "updatedAt": "2026-02-23T00:00:00Z"
+  },
+  {
+    "name": "Controlled",
+    "type": "primary",
+    "effect": "+0.05 Control",
+    "stats": {
+      "lure": null,
+      "luck": null,
+      "control": 0.05,
+      "resilience": null,
+      "maxKg": null,
+      "maxKgPercent": null
+    },
+    "notes": "",
+    "updatedAt": "2026-02-23T00:00:00Z"
+  },
+  {
+    "name": "Abyssal",
+    "type": "primary",
+    "effect": "+10% Resilience",
+    "stats": {
+      "lure": null,
+      "luck": null,
+      "control": null,
+      "resilience": 10,
+      "maxKg": null,
+      "maxKgPercent": null
+    },
+    "notes": "",
+    "updatedAt": "2026-02-23T00:00:00Z"
+  },
+  {
+    "name": "Quality",
+    "type": "primary",
+    "effect": "+15% Lure Speed, +15% Luck",
+    "stats": {
+      "lure": 15,
+      "luck": 15,
+      "control": null,
+      "resilience": null,
+      "maxKg": null,
+      "maxKgPercent": null
+    },
+    "notes": "",
+    "updatedAt": "2026-02-23T00:00:00Z"
+  },
+  {
+    "name": "Rapid",
+    "type": "primary",
+    "effect": "+30% Lure Speed",
+    "stats": {
+      "lure": 30,
+      "luck": null,
+      "control": null,
+      "resilience": null,
+      "maxKg": null,
+      "maxKgPercent": null
+    },
+    "notes": "",
+    "updatedAt": "2026-02-23T00:00:00Z"
+  },
+  {
+    "name": "Unbreakable",
+    "type": "primary",
+    "effect": "+10000 Max Kg",
+    "stats": {
+      "lure": null,
+      "luck": null,
+      "control": null,
+      "resilience": null,
+      "maxKg": 10000,
+      "maxKgPercent": null
+    },
+    "notes": "",
+    "updatedAt": "2026-02-23T00:00:00Z"
+  },
+  {
+    "name": "Noir",
+    "type": "secondary",
+    "effect": "Mutation luck bonus.",
+    "stats": {
+      "lure": null,
+      "luck": null,
+      "control": null,
+      "resilience": null,
+      "maxKg": null,
+      "maxKgPercent": null
+    },
+    "notes": "",
+    "updatedAt": "2026-02-23T00:00:00Z"
+  },
+  {
+    "name": "Sea Overlord",
+    "type": "secondary",
+    "effect": "Progress speed bonus.",
+    "stats": {
+      "lure": null,
+      "luck": null,
+      "control": null,
+      "resilience": null,
+      "maxKg": null,
+      "maxKgPercent": null
+    },
+    "notes": "",
+    "updatedAt": "2026-02-23T00:00:00Z"
+  },
+  {
+    "name": "Blessed Song",
+    "type": "secondary",
+    "effect": "Chance to instantly catch fish.",
+    "stats": {
+      "lure": null,
+      "luck": null,
+      "control": null,
+      "resilience": null,
+      "maxKg": null,
+      "maxKgPercent": null
+    },
+    "notes": "",
+    "updatedAt": "2026-02-23T00:00:00Z"
+  },
+  {
+    "name": "Wormhole",
+    "type": "secondary",
+    "effect": "Chance to wormhole fish.",
+    "stats": {
+      "lure": null,
+      "luck": null,
+      "control": null,
+      "resilience": null,
+      "maxKg": null,
+      "maxKgPercent": null
+    },
+    "notes": "",
+    "updatedAt": "2026-02-23T00:00:00Z"
+  }
+]

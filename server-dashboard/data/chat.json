@@ -1,0 +1,31 @@
+{
+  "channels": [
+    {
+      "name": "general",
+      "topic": "General discussion",
+      "createdAt": "2026-02-20T09:17:23Z",
+      "createdBy": "system"
+    },
+    {
+      "name": "support",
+      "topic": "User help and issue triage",
+      "createdAt": "2026-02-20T09:17:23Z",
+      "createdBy": "system"
+    },
+    {
+      "name": "announcements",
+      "topic": "Release notes and updates",
+      "createdAt": "2026-02-20T09:17:23Z",
+      "createdBy": "system"
+    }
+  ],
+  "messages": [
+    {
+      "id": "5eafa9e3761e",
+      "channel": "announcements",
+      "author": "Makoral.Dev",
+      "text": "test",
+      "createdAt": "2026-02-20T09:25:22Z"
+    }
+  ]
+}

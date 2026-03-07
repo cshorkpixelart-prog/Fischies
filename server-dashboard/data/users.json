@@ -1,0 +1,9 @@
+[
+  {
+    "username": "Makoral.Dev",
+    "passwordHash": "pbkdf2_sha256$200000$23c2d853d0c4cec6268d76fe365a7bb4$d527ead88e7c0a3328917f45e7724e347d34447e109a09cc98ca2f2d6af430f0",
+    "role": "owner",
+    "createdAt": "2026-02-20T09:17:23Z",
+    "lastLoginAt": "2026-02-24T19:18:23Z"
+  }
+]

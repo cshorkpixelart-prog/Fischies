@@ -1,0 +1,15 @@
+{
+  "__note": "Simplified Cerebra tuning: controller hysteresis, prediction lead, target darkness, and tracker jump gate.",
+  "enabled": true,
+  "CEREBRA_HOLD_KEEP_BAND_PX": 1.8,
+  "CEREBRA_ACTUATION_SWITCH_COOLDOWN_MS": 45,
+  "CEREBRA_OVERLAP_EDGE_BIAS_PX": 9.0,
+  "CEREBRA_REENGAGE_ERR_PX": 5.0,
+  "CEREBRA_DYNAMIC_LOOKAHEAD_BASE_MS": 45.0,
+  "CEREBRA_BLACK_WAVE_MAX_LUMA": 82,
+  "CEREBRA_TARGET_LOCK_MAX_JUMP_PX": 110.0,
+  "CEREBRA_POLL_MIN": 4,
+  "CEREBRA_POLL_MAX": 8,
+  "HOTKEY_POLL_MS": 5,
+  "HOTKEY_DEBOUNCE_MS": 120
+}
