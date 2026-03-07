@@ -8,15 +8,14 @@ CATCH_BAR_ACTIVE_MIN_RUN := 52
 FAST_LURE_SKIP_THRESHOLD := 100
 FAST_LURE_FORCE_ADVANCE_FRAMES := 4
 FAST_LURE_NO_IMAGE_ADVANCE_FRAMES := 2
-FAST_SKIP_CLICK_DELAY_MS := 0
-FAST_SKIP_SETTLE_DELAY_MS := 1
-SHAKE_LOOP_DELAY_MS := 0
+SHAKE_LOOP_DELAY_MS := 12
 
 SHAKE_AREA := {x1: 20, y1: 40, x2: 780, y2: 580}
 
 SHAKE_IMAGE := 'Assets\Shake.png'
 
 MAX_SHAKES := 50
+MIN_SHAKE_FRAMES_BEFORE_SUCCESS := 2
 
 
 autoShake() {
@@ -30,20 +29,6 @@ autoShake() {
 
         shakePin := createShakeAreaPin()
         fastLureMode := isFastLureSpeedRod()
-
-        ; High-lure rods often skip visible shake almost instantly.
-        if fastLureMode {
-            updateStatus("Shaking: fast skip")
-            Loop 2 {
-                if ImageSearch(&X, &Y, SHAKE_AREA.x1, SHAKE_AREA.y1, SHAKE_AREA.x2, SHAKE_AREA.y2, "*40 *TransFF0000 " SHAKE_IMAGE)
-                    SendEvent "{Click, " X ", " Y "}"
-                Sleep FAST_SKIP_CLICK_DELAY_MS
-            }
-            Sleep FAST_SKIP_SETTLE_DELAY_MS
-            shakePin.Destroy()
-            updateStatus("")
-            return true
-        }
 
         lastShake := {x: 0, y: 0}
         success := false
@@ -71,7 +56,7 @@ autoShake() {
             }
             if fastLureMode {
                 ; Rods with >=100% lure speed usually skip shake almost immediately.
-                if noShakeFrames >= FAST_LURE_NO_IMAGE_ADVANCE_FRAMES || A_Index >= FAST_LURE_FORCE_ADVANCE_FRAMES {
+                if A_Index >= MIN_SHAKE_FRAMES_BEFORE_SUCCESS && (noShakeFrames >= FAST_LURE_NO_IMAGE_ADVANCE_FRAMES || A_Index >= FAST_LURE_FORCE_ADVANCE_FRAMES) {
                     updateStatus("")
                     success := true
                     break

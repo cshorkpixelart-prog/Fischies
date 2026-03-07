@@ -701,6 +701,13 @@ findHeartbeatMarkerX(searchArea, &xCenter) {
 getArrowOffsets() {
     global
 
+    ; Always start from stable defaults so non-heartbeat rods recover cleanly
+    ; even when calibration cannot find the arrow/fish pixels.
+    LEFT_ARROW_TO_MIDDLE_OFFSET := 15
+    RIGHT_ARROW_TO_MIDDLE_OFFSET := 15
+    CONTROL_BAR_HALF_WIDTH := 15
+    CONTROL_BAR_WIDTH := 30
+
     activateRoblox()
     area := CATCH_BAR_TOP_LINE
     if PixelSearch(&xFish, &Y, area.x1, area.y1, area.x2, area.y2, CALIBRATION_FISH_COLOR, CALIBRATION_FISH_TOLERANCE) {
@@ -713,13 +720,6 @@ getArrowOffsets() {
             CONTROL_BAR_WIDTH := CONTROL_BAR_HALF_WIDTH * 2
             return
         }
-    }
-
-    if CONTROL_BAR_WIDTH <= 0 {
-        LEFT_ARROW_TO_MIDDLE_OFFSET := 15
-        RIGHT_ARROW_TO_MIDDLE_OFFSET := 15
-        CONTROL_BAR_HALF_WIDTH := 15
-        CONTROL_BAR_WIDTH := 30
     }
 }
 
