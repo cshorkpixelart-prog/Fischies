@@ -200,56 +200,66 @@ pickColorToControl(editControl, previewControl) {
     CoordMode("Mouse", "Screen")
 
     pickerGui["title"].Text := "Color Picker"
-    pickerGui["hint"].Text := "Move mouse to target. F = freeze/unfreeze, Space/Enter = select, Esc = cancel"
+    pickerGui["hint"].Text := "Move mouse. Left click/Enter/Space = select, Right click/F = freeze, Esc = cancel"
     pickerGui.gui.Show("NoActivate x20 y20")
 
-    Loop {
-        Sleep 40
+    try {
+        Loop {
+            Sleep 25
 
-        if !isFrozen {
-            MouseGetPos(&x, &y)
-            color := PixelGetColor(x, y, "RGB")
-            updateColorPickerHud(pickerGui, x, y, color, false)
-        } else {
-            updateColorPickerHud(pickerGui, frozenX, frozenY, frozenColor, true)
-        }
-
-        if GetKeyState("Escape", "P") {
-            pickerGui.gui.Destroy()
-            CoordMode("Pixel", oldPixelMode)
-            CoordMode("Mouse", oldMouseMode)
-            return
-        }
-
-        if GetKeyState("f", "P") {
-            if isFrozen {
-                isFrozen := false
-            } else {
-                MouseGetPos(&frozenX, &frozenY)
-                frozenColor := PixelGetColor(frozenX, frozenY, "RGB")
-                isFrozen := true
-            }
-            Sleep 160
-            continue
-        }
-
-        if GetKeyState("Space", "P") || GetKeyState("Enter", "P") {
-            if isFrozen {
-                color := frozenColor
-            } else {
+            if !isFrozen {
                 MouseGetPos(&x, &y)
                 color := PixelGetColor(x, y, "RGB")
+                updateColorPickerHud(pickerGui, x, y, color, false)
+            } else {
+                updateColorPickerHud(pickerGui, frozenX, frozenY, frozenColor, true)
             }
-            hex := Format("0x{:06X}", color & 0xFFFFFF)
-            editControl.Text := hex
-            setPreviewColor(previewControl, hex)
-            break
-        }
-    }
 
-    pickerGui.gui.Destroy()
-    CoordMode("Pixel", oldPixelMode)
-    CoordMode("Mouse", oldMouseMode)
+            if GetKeyState("Escape", "P") {
+                KeyWait("Escape")
+                return
+            }
+
+            if GetKeyState("f", "P") || GetKeyState("RButton", "P") {
+                if isFrozen {
+                    isFrozen := false
+                } else {
+                    MouseGetPos(&frozenX, &frozenY)
+                    frozenColor := PixelGetColor(frozenX, frozenY, "RGB")
+                    isFrozen := true
+                }
+                if GetKeyState("f", "P")
+                    KeyWait("f")
+                if GetKeyState("RButton", "P")
+                    KeyWait("RButton")
+                continue
+            }
+
+            if GetKeyState("LButton", "P") || GetKeyState("Space", "P") || GetKeyState("Enter", "P") {
+                if isFrozen {
+                    color := frozenColor
+                } else {
+                    MouseGetPos(&x, &y)
+                    color := PixelGetColor(x, y, "RGB")
+                }
+                hex := Format("0x{:06X}", color & 0xFFFFFF)
+                editControl.Text := hex
+                setPreviewColor(previewControl, hex)
+
+                if GetKeyState("LButton", "P")
+                    KeyWait("LButton")
+                if GetKeyState("Space", "P")
+                    KeyWait("Space")
+                if GetKeyState("Enter", "P")
+                    KeyWait("Enter")
+                return
+            }
+        }
+    } finally {
+        try pickerGui.gui.Destroy()
+        CoordMode("Pixel", oldPixelMode)
+        CoordMode("Mouse", oldMouseMode)
+    }
 }
 
 createColorPickerHud() {
