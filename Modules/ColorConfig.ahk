@@ -199,8 +199,8 @@ pickColorToControl(editControl, previewControl) {
     CoordMode("Pixel", "Screen")
     CoordMode("Mouse", "Screen")
 
-    pickerGui["title"].Text := "Color Picker"
-    pickerGui["hint"].Text := "Move mouse. Left click/Enter/Space = select, Right click/F = freeze, Esc = cancel"
+    pickerGui.title.Text := "Color Picker"
+    pickerGui.hint.Text := "Move mouse. Left click/Enter/Space = select, Right click/F = freeze, Esc = cancel"
     pickerGui.gui.Show("NoActivate x20 y20")
 
     try {
