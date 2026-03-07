@@ -68,19 +68,31 @@ configureCatchScanLineBeforeStart() {
     guiX := winX + CATCH_SCAN_AREA.x1
     guiY := winY + CATCH_SCAN_AREA.y1
 
-    overlay := Gui("+AlwaysOnTop +ToolWindow +Border", "Catch Scan Setup")
+    overlay := Gui("+AlwaysOnTop +ToolWindow +Border +Resize +MinSize120x12", "Catch Scan Setup")
     overlay.BackColor := "1C1230"
     overlay.MarginX := 0
     overlay.MarginY := 0
-    overlay.AddText("xm ym w" previewW " h" previewH " Background5E2CA5")
+    areaFill := overlay.AddText("x0 y0 w" previewW " h" previewH " Background5E2CA5")
     midY := Round(previewH / 2)
-    overlay.AddText("x0 y" midY " w" previewW " h1 BackgroundFFFFFF")
+    scanLine := overlay.AddText("x0 y" midY " w" previewW " h1 BackgroundFFFFFF")
+    overlay.OnEvent("Size", overlayResized)
     overlay.Show("x" guiX " y" guiY " w" previewW " h" previewH)
+
+    overlayResized(thisGui, minMax, guiW, guiH) {
+        local midLineY
+
+        if guiW < 1 || guiH < 1
+            return
+
+        areaFill.Move(0, 0, guiW, guiH)
+        midLineY := Round(guiH / 2)
+        scanLine.Move(0, midLineY, guiW, 1)
+    }
 
     info := Gui("+AlwaysOnTop +ToolWindow", "Catch Scan Setup Controls")
     setGuiDarkBase(info)
     info.SetFont("s10 cEAEAEA", "Segoe UI")
-    info.AddText("xm ym", "Drag the purple box onto the catch bar area.")
+    info.AddText("xm ym", "Drag and resize the purple box onto the catch bar area.")
     info.AddText("xm y+6", "White line = 1px scan line used for fish detection.")
     info.AddText("xm y+8", "Press Enter to confirm. Press Escape to exit macro.")
     applyGuiDarkTheme(info)
