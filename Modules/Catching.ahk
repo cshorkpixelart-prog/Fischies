@@ -134,6 +134,12 @@ configureCatchScanLineBeforeStart() {
 }
 
 
+redoCatchScanSetup() {
+    global CATCH_SCAN_LINE_CONFIGURED
+    CATCH_SCAN_LINE_CONFIGURED := false
+    configureCatchScanLineBeforeStart()
+}
+
 ensureCatchScanConfigured() {
     global CATCH_SCAN_LINE_CONFIGURED
 
