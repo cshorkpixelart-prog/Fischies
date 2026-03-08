@@ -16,6 +16,8 @@ SHAKE_AREA := {x1: 20, y1: 40, x2: 780, y2: 580}
 SHAKE_AREA_CONFIGURED := false
 SHAKE_DEBUG_ENABLED := false
 SHAKE_IMAGE := 'Assets\Shake.png'
+SHAKE_IMAGE_VARIATION := 40
+SHAKE_IMAGE_RED_FILTERS := ["FF0000", "FE0000", "FD0000", "FC0000", "F00000", "E00000"]
 MAX_SHAKES := 50
 
 CATCH_BAR_MIN_RUN_RATIO := 0.11
@@ -125,6 +127,17 @@ applySavedShakeArea() {
     return true
 }
 
+findShakeImage(&outX, &outY) {
+    global SHAKE_AREA, SHAKE_IMAGE, SHAKE_IMAGE_VARIATION, SHAKE_IMAGE_RED_FILTERS
+
+    for _, redHex in SHAKE_IMAGE_RED_FILTERS {
+        spec := "*" SHAKE_IMAGE_VARIATION " *Trans" redHex " " SHAKE_IMAGE
+        if ImageSearch(&outX, &outY, SHAKE_AREA.x1, SHAKE_AREA.y1, SHAKE_AREA.x2, SHAKE_AREA.y2, spec)
+            return true
+    }
+    return false
+}
+
 autoShake() {
     global SHAKE_DEBUG_ENABLED
 
@@ -146,7 +159,7 @@ autoShake() {
         if fastLureMode || cerebraMode {
             updateStatus("Shaking: fast skip")
             Loop 2 {
-                if ImageSearch(&X, &Y, SHAKE_AREA.x1, SHAKE_AREA.y1, SHAKE_AREA.x2, SHAKE_AREA.y2, "*40 *TransFF0000 " SHAKE_IMAGE)
+                if findShakeImage(&X, &Y)
                     SendEvent "{Click, " X ", " Y "}"
                 Sleep 20
             }
@@ -165,13 +178,13 @@ autoShake() {
             updateStatus("Shaking: " A_Index "/" MAX_SHAKES)
             activateRoblox()
 
-            if ImageSearch(&X, &Y, SHAKE_AREA.x1, SHAKE_AREA.y1, SHAKE_AREA.x2, SHAKE_AREA.y2, "*40 *TransFF0000 " SHAKE_IMAGE) {
+            if findShakeImage(&X, &Y) {
                 SendEvent "{Click, " X ", " Y "}"
                 shakeClicks += 1
                 noShakeFrames := 0
                 MouseMove SHAKE_AREA.x2, SHAKE_AREA.y2
                 Loop 5 {
-                    if !ImageSearch(&X, &Y, SHAKE_AREA.x1, SHAKE_AREA.y1, SHAKE_AREA.x2, SHAKE_AREA.y2, "*40 *TransFF0000 " SHAKE_IMAGE)
+                    if !findShakeImage(&X, &Y)
                         break
                     Sleep 10
                 }
