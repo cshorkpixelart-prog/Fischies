@@ -16,8 +16,6 @@ SHAKE_AREA := {x1: 20, y1: 40, x2: 780, y2: 580}
 SHAKE_AREA_CONFIGURED := false
 SHAKE_DEBUG_ENABLED := false
 SHAKE_IMAGE := 'Assets\Shake.png'
-SHAKE_IMAGE_VARIATION := 40
-SHAKE_IMAGE_RED_FILTERS := ["FF0000", "FE0000", "FD0000", "FC0000", "F00000", "E00000"]
 MAX_SHAKES := 50
 
 CATCH_BAR_MIN_RUN_RATIO := 0.11
@@ -127,20 +125,7 @@ applySavedShakeArea() {
     return true
 }
 
-findShakeImage(&outX, &outY) {
-    global SHAKE_AREA, SHAKE_IMAGE, SHAKE_IMAGE_VARIATION, SHAKE_IMAGE_RED_FILTERS
-
-    for _, redHex in SHAKE_IMAGE_RED_FILTERS {
-        spec := "*" SHAKE_IMAGE_VARIATION " *Trans" redHex " " SHAKE_IMAGE
-        if ImageSearch(&outX, &outY, SHAKE_AREA.x1, SHAKE_AREA.y1, SHAKE_AREA.x2, SHAKE_AREA.y2, spec)
-            return true
-    }
-    return false
-}
-
 autoShake() {
-    global SHAKE_DEBUG_ENABLED
-
     previousMouseDelay := A_MouseDelay
     SetMouseDelay -1
 
@@ -149,84 +134,41 @@ autoShake() {
         SHAKE_DEBUG_ENABLED := StrLower(Trim(getInfoConfigValue("ShakeScanDebug", "false"))) = "true"
 
         updateStatus("Shaking.")
+
         activateRoblox()
 
         shakePin := createShakeAreaPin()
-        cerebraMode := isCerebraRodSelected()
-        fastLureMode := isFastLureSpeedRod()
 
-        ; High-lure rods (including Cerebra) frequently skip visible shake almost instantly.
-        if fastLureMode || cerebraMode {
-            updateStatus("Shaking: fast skip")
-            Loop 2 {
-                if findShakeImage(&X, &Y)
-                    SendEvent "{Click, " X ", " Y "}"
-                Sleep 20
-            }
-            Sleep 160
-            if IsObject(shakePin)
-                shakePin.Destroy()
-            updateStatus("")
-            return true
-        }
-
+        lastShake := {x: 0, y: 0}
         success := false
-        shakeClicks := 0
-        noShakeFrames := 0
 
         Loop MAX_SHAKES {
             updateStatus("Shaking: " A_Index "/" MAX_SHAKES)
+
             activateRoblox()
 
-            if findShakeImage(&X, &Y) {
+            if ImageSearch(&X, &Y, SHAKE_AREA.x1, SHAKE_AREA.y1, SHAKE_AREA.x2, SHAKE_AREA.y2, "*10 *TransFF0000 " SHAKE_IMAGE) {
                 SendEvent "{Click, " X ", " Y "}"
-                shakeClicks += 1
-                noShakeFrames := 0
+                lastShake := {x: X, y: Y}
                 MouseMove SHAKE_AREA.x2, SHAKE_AREA.y2
                 Loop 5 {
-                    if !findShakeImage(&X, &Y)
+                    if !ImageSearch(&X, &Y, SHAKE_AREA.x1, SHAKE_AREA.y1, SHAKE_AREA.x2, SHAKE_AREA.y2, "*10 *TransFF0000 " SHAKE_IMAGE)
                         break
                     Sleep 10
-                }
-            } else if cerebraMode || fastLureMode {
-                noShakeFrames += 1
-                if cerebraMode && Mod(noShakeFrames, CEREBRA_SHAKE_FALLBACK_CLICK_INTERVAL) = 0 {
-                    fallbackX := Round((SHAKE_AREA.x1 + SHAKE_AREA.x2) / 2)
-                    fallbackY := Round((SHAKE_AREA.y1 + SHAKE_AREA.y2) / 2)
-                    SendEvent "{Click, " fallbackX ", " fallbackY "}"
                 }
             }
             Sleep 10
 
             if isCatchBarDisplayed() {
+                updateStatus("")
                 success := true
                 break
-            }
-            if fastLureMode && (noShakeFrames >= FAST_LURE_NO_IMAGE_ADVANCE_FRAMES || A_Index >= FAST_LURE_FORCE_ADVANCE_FRAMES) {
-                success := true
-                break
-            }
-            if cerebraMode {
-                if isCerebraCatchBarDisplayedByColor() {
-                    success := true
-                    break
-                }
-                if noShakeFrames >= CEREBRA_FORCE_ADVANCE_NO_IMAGE_FRAMES || A_Index >= CEREBRA_FORCE_ADVANCE_MAX_FRAMES {
-                    success := true
-                    break
-                }
-            }
-            if cerebraMode && noShakeFrames >= CEREBRA_SHAKE_NO_IMAGE_FRAMES {
-                if shakeClicks > 0 || isCerebraCatchBarDisplayedByColor() {
-                    success := true
-                    break
-                }
-                noShakeFrames := 0
             }
         }
 
         if IsObject(shakePin)
             shakePin.Destroy()
+
         updateStatus("")
         return success
     } finally {
