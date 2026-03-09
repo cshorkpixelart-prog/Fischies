@@ -51,6 +51,10 @@ CATCH_SCAN_AREA := {x1: 234, y1: 502, x2: 565, y2: 517}
 CATCH_SCAN_COLOR_VARIATION := 56
 CATCH_SCAN_DEBUG_ENABLED := true
 CATCH_SCAN_COLOR_SET := ["0xEA0092", "0x7A7879", "0x000000", "0x202020"]
+CATCH_USE_FIXED_AREA := true
+CATCH_FIXED_AREA := {x1: 249, y1: 502, x2: 551, y2: 517}
+CATCH_WHITE_VARIATION := 8
+CATCH_CENTER_CUT_RATIO := 0.22
 
 configureCatchScanLineBeforeStart() {
     global CATCH_SCAN_LINE_CONFIGURED, CATCH_SCAN_LINE, CATCH_SCAN_AREA, CATCH_BAR, CATCH_BAR_TOP_LINE, CATCH_BAR_ARROW_LINE
@@ -141,7 +145,13 @@ redoCatchScanSetup() {
 }
 
 ensureCatchScanConfigured() {
-    global CATCH_SCAN_LINE_CONFIGURED
+    global CATCH_SCAN_LINE_CONFIGURED, CATCH_USE_FIXED_AREA, CATCH_FIXED_AREA
+
+    if CATCH_USE_FIXED_AREA {
+        applyCatchArea(CATCH_FIXED_AREA.x1, CATCH_FIXED_AREA.y1, CATCH_FIXED_AREA.x2, CATCH_FIXED_AREA.y2)
+        CATCH_SCAN_LINE_CONFIGURED := true
+        return
+    }
 
     if CATCH_SCAN_LINE_CONFIGURED
         return
@@ -152,6 +162,17 @@ ensureCatchScanConfigured() {
     }
 
     configureCatchScanLineBeforeStart()
+}
+
+applyCatchArea(x1, y1, x2, y2) {
+    global CATCH_SCAN_AREA, CATCH_SCAN_LINE, CATCH_BAR, CATCH_BAR_TOP_LINE, CATCH_BAR_ARROW_LINE
+
+    lineY := y1 + Round((y2 - y1) / 2)
+    CATCH_SCAN_AREA := {x1: Round(x1), y1: Round(y1), x2: Round(x2), y2: Round(y2)}
+    CATCH_SCAN_LINE := {x1: Round(x1), y: Round(lineY), x2: Round(x2)}
+    CATCH_BAR := {x1: Round(x1), y1: Round(y1), x2: Round(x2), y2: Round(y2), xLeft: Round(x1), xRight: Round(x2)}
+    CATCH_BAR_TOP_LINE := {x1: Round(x1), y1: Round(lineY), x2: Round(x2), y2: Round(lineY)}
+    CATCH_BAR_ARROW_LINE := {x1: Round(x1), y1: Round(lineY), x2: Round(x2), y2: Round(lineY)}
 }
 
 applySavedCatchScanArea() {
@@ -167,12 +188,7 @@ applySavedCatchScanArea() {
     if x2 <= x1 || y2 <= y1
         return false
 
-    lineY := y1 + Round((y2 - y1) / 2)
-    CATCH_SCAN_AREA := {x1: Round(x1), y1: Round(y1), x2: Round(x2), y2: Round(y2)}
-    CATCH_SCAN_LINE := {x1: Round(x1), y: Round(lineY), x2: Round(x2)}
-    CATCH_BAR := {x1: Round(x1), y1: Round(y1), x2: Round(x2), y2: Round(y2), xLeft: Round(x1), xRight: Round(x2)}
-    CATCH_BAR_TOP_LINE := {x1: Round(x1), y1: Round(lineY), x2: Round(x2), y2: Round(lineY)}
-    CATCH_BAR_ARROW_LINE := {x1: Round(x1), y1: Round(lineY), x2: Round(x2), y2: Round(lineY)}
+    applyCatchArea(x1, y1, x2, y2)
     return true
 }
 
@@ -218,8 +234,9 @@ catchFish() {
 
     catchMinX := CATCH_BAR_TOP_LINE.x1
     catchMaxX := CATCH_BAR_TOP_LINE.x2
-    CATCH_BAR_LEFT_X := catchMinX + (CONTROL_BAR_WIDTH * 0.70)
-    CATCH_BAR_RIGHT_X := catchMaxX - (CONTROL_BAR_WIDTH * 0.70)
+    initialInset := Round(Max(2, CONTROL_BAR_WIDTH * CATCH_CENTER_CUT_RATIO))
+    CATCH_BAR_LEFT_X := clampValue(catchMinX + initialInset, catchMinX, catchMaxX)
+    CATCH_BAR_RIGHT_X := clampValue(catchMaxX - initialInset, catchMinX, catchMaxX)
 
     missingFishFrames := 0
     uiMissingFrames := 0
@@ -260,17 +277,18 @@ catchFish() {
         }
         updateFishState(state, xFish, dt)
 
-        controlBar := getControlBarProperties(heartbeatMode)
         barMiddleX := false
-        if controlBar.isWhite {
-            barMiddleX := controlBar.x + CONTROL_BAR_HALF_WIDTH
+        if findWhiteControlBarBoundsOnLine(CATCH_SCAN_LINE.y, &whiteBounds) {
+            CONTROL_BAR_WIDTH := whiteBounds.width
+            CONTROL_BAR_HALF_WIDTH := Round(whiteBounds.width / 2)
+            barMiddleX := Round((whiteBounds.x1 + whiteBounds.x2) / 2)
             learning.whiteBarFrames += 1
-        } else {
+            insetPx := Round(Max(2, whiteBounds.width * CATCH_CENTER_CUT_RATIO))
+            CATCH_BAR_LEFT_X := whiteBounds.x1 + insetPx
+            CATCH_BAR_RIGHT_X := whiteBounds.x2 - insetPx
+        } else if state.hasBar {
             learning.multicolorBarFrames += 1
-            if PixelSearch(&arrowX, &Y, CATCH_BAR_ARROW_LINE.x1, CATCH_BAR_ARROW_LINE.y1, CATCH_BAR_ARROW_LINE.x2, CATCH_BAR_ARROW_LINE.y2, CATCH_ARROW_COLOR, CATCH_ARROW_TOLERANCE)
-                barMiddleX := estimateBarMiddleFromArrow(arrowX, state)
-            else if state.hasBar
-                barMiddleX := state.lastBarMiddleX + (state.barVelocity * dt)
+            barMiddleX := state.lastBarMiddleX + (state.barVelocity * dt)
         }
 
         if !barMiddleX {
@@ -305,8 +323,8 @@ catchFish() {
             break
         }
 
-        CATCH_BAR_LEFT_X := catchMinX + (CONTROL_BAR_WIDTH * 0.70)
-        CATCH_BAR_RIGHT_X := catchMaxX - (CONTROL_BAR_WIDTH * 0.70)
+        CATCH_BAR_LEFT_X := clampValue(CATCH_BAR_LEFT_X, catchMinX, catchMaxX)
+        CATCH_BAR_RIGHT_X := clampValue(CATCH_BAR_RIGHT_X, catchMinX, catchMaxX)
 
         if xFish > CATCH_BAR_RIGHT_X {
             setControlDirection(state, 1)
@@ -319,37 +337,18 @@ catchFish() {
             continue
         }
 
-        zoneHalfWidth := Max(4, CONTROL_BAR_WIDTH * CATCHING_CENTER_RATIO)
-        centerLeftX := Round(clampValue(barMiddleX - zoneHalfWidth, catchMinX, catchMaxX))
-        centerRightX := Round(clampValue(barMiddleX + zoneHalfWidth, catchMinX, catchMaxX))
-        inCenterZone := (xFish >= centerLeftX && xFish <= centerRightX)
+        inCenterZone := (xFish >= CATCH_BAR_LEFT_X && xFish <= CATCH_BAR_RIGHT_X)
         updateCatchDebugBar(catchMinX, catchMaxX, xFish, barMiddleX, CATCH_BAR_LEFT_X, CATCH_BAR_RIGHT_X, inCenterZone ? "CENTER" : "TRACK")
 
-        predictedFishX := clampValue(xFish + (state.fishVelocity * CATCHING_LOOKAHEAD_MS), catchMinX, catchMaxX)
-        positionError := predictedFishX - barMiddleX
-        speedGap := state.fishVelocity - state.barVelocity
-        controlBarSpeed := Abs(state.barVelocity)
-
         if inCenterZone {
-            if controlBarSpeed > CATCHING_BRAKE_SPEED && state.barDirection != 0
-                setControlDirection(state, state.barDirection * -1)
-            else if Abs(speedGap) > 0.12
-                setControlDirection(state, speedGap > 0 ? 1 : -1)
-            else if state.fishDirection != 0
-                setControlDirection(state, state.fishDirection)
+            if state.clickDown
+                setControlDirection(state, -1)
             Sleep 2
             continue
         }
 
-        if Abs(positionError) <= CATCHING_DEADZONE_PX {
-            if state.fishDirection != 0
-                setControlDirection(state, state.fishDirection)
-            Sleep 2
-            continue
-        }
-
-        setControlDirection(state, positionError > 0 ? 1 : -1)
-        Sleep computePulseDelay(positionError, speedGap)
+        setControlDirection(state, xFish > CATCH_BAR_RIGHT_X ? 1 : -1)
+        Sleep 6
     }
 
     releaseControl(state)
@@ -820,6 +819,49 @@ findFishIndicatorX(search, &xFish) {
     }
 
     return false
+}
+
+findWhiteControlBarBoundsOnLine(y, &bounds) {
+    global CATCH_BAR, CATCH_WHITE_VARIATION
+
+    runStart := 0
+    bestStart := 0
+    bestEnd := 0
+
+    x := CATCH_BAR.x1
+    while x <= CATCH_BAR.x2 {
+        color := PixelGetColor(x, y, "RGB")
+        if areColorsSimilar(color, "0xFFFFFF", CATCH_WHITE_VARIATION) {
+            if runStart = 0
+                runStart := x
+        } else if runStart > 0 {
+            runEnd := x - 1
+            if (runEnd - runStart) > (bestEnd - bestStart) {
+                bestStart := runStart
+                bestEnd := runEnd
+            }
+            runStart := 0
+        }
+        x += 1
+    }
+
+    if runStart > 0 {
+        runEnd := CATCH_BAR.x2
+        if (runEnd - runStart) > (bestEnd - bestStart) {
+            bestStart := runStart
+            bestEnd := runEnd
+        }
+    }
+
+    if bestEnd <= bestStart
+        return false
+
+    width := bestEnd - bestStart + 1
+    if width < 18
+        return false
+
+    bounds := {x1: bestStart, x2: bestEnd, width: width}
+    return true
 }
 
 getControlBarProperties(heartbeatMode := false) {
