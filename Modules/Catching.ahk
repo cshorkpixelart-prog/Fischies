@@ -25,7 +25,7 @@ CATCHING_BAR_VELOCITY_SMOOTHING := 0.40
 CATCHING_DIRECTION_SWITCH_COOLDOWN_MS := 14
 CATCHING_MAX_POSITION_JUMP_PX := 140
 CATCH_MAX_DURATION_MS := 35000
-NORMAL_END_NO_STRONG_SIGNAL_MS := 1100
+NORMAL_END_NO_STRONG_SIGNAL_MS := 4500
 
 CATCH_ARROW_COLOR := "0x7A7879"
 CATCH_ARROW_TOLERANCE := 10
@@ -53,7 +53,7 @@ CATCH_SCAN_DEBUG_ENABLED := true
 CATCH_SCAN_COLOR_SET := ["0xEA0092", "0x7A7879", "0x000000", "0x202020"]
 CATCH_USE_FIXED_AREA := true
 CATCH_FIXED_AREA := {x1: 249, y1: 502, x2: 551, y2: 517}
-CATCH_WHITE_VARIATION := 8
+CATCH_WHITE_VARIATION := 18
 CATCH_CENTER_CUT_RATIO := 0.22
 
 configureCatchScanLineBeforeStart() {
@@ -268,7 +268,7 @@ catchFish() {
             learning.fishDetectedFrames += 1
         } else {
             missingFishFrames += 1
-            if !state.hasFish {
+            if !state.hasFish && missingFishFrames >= 18 {
                 breakReason := "no_fish"
                 break
             }
@@ -314,11 +314,11 @@ catchFish() {
             breakReason := "max_duration"
             break
         }
-        if A_Index > startupGraceFrames && uiMissingFrames >= 3 {
+        if A_Index > startupGraceFrames && uiMissingFrames >= 30 {
             breakReason := "ui_missing"
             break
         }
-        if A_Index > startupGraceFrames && (now - lastStrongSignalTick) >= NORMAL_END_NO_STRONG_SIGNAL_MS {
+        if elapsedMs > 5000 && (now - lastStrongSignalTick) >= NORMAL_END_NO_STRONG_SIGNAL_MS {
             breakReason := "no_strong_signal"
             break
         }

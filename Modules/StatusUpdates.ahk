@@ -16,6 +16,8 @@ CATCH_DEBUG_BOUND_RIGHT := false
 CATCH_DEBUG_FISH := false
 CATCH_DEBUG_BAR := false
 CATCH_DEBUG_TEXT := false
+CATCH_DEBUG_LAST_CATCH_MIN_X := 0
+CATCH_DEBUG_LAST_CATCH_MAX_X := 1
 
 initStatusHud() {
     global STATUS_HUD_GUI, STATUS_HUD_TITLE_CTRL, STATUS_HUD_TIME_CTRL, STATUS_HUD_STATUS_CTRL, STATUS_HUD_LOG_CTRL
@@ -95,6 +97,32 @@ updateStatus(message) {
         appendStatusHudLog(message)
 }
 
+
+positionCatchDebugBar(catchMinX := 0, catchMaxX := 0) {
+    global CATCH_DEBUG_GUI, CATCH_DEBUG_TRACK_W, CATCH_BAR
+
+    if !IsObject(CATCH_DEBUG_GUI)
+        return
+
+    try WinGetClientPos &winX, &winY, , , "ahk_exe RobloxPlayerBeta.exe"
+    catch
+        return
+
+    if catchMaxX > catchMinX {
+        guiW := CATCH_DEBUG_TRACK_W + 16
+        centerX := winX + Round((catchMinX + catchMaxX) / 2)
+        guiX := centerX - Round(guiW / 2)
+        catchTop := 520
+        if IsObject(CATCH_BAR) && CATCH_BAR.HasOwnProp("y1")
+            catchTop := CATCH_BAR.y1
+        guiY := winY + catchTop - 86
+        CATCH_DEBUG_GUI.Show("NoActivate x" guiX " y" guiY)
+        return
+    }
+
+    CATCH_DEBUG_GUI.Show("NoActivate x" (winX + 100) " y" (winY + 420))
+}
+
 showCatchDebugBar() {
     global CATCH_DEBUG_GUI, CATCH_DEBUG_TRACK_W
     global CATCH_DEBUG_BOUND_LEFT, CATCH_DEBUG_BOUND_RIGHT, CATCH_DEBUG_FISH, CATCH_DEBUG_BAR, CATCH_DEBUG_TEXT
@@ -119,8 +147,9 @@ showCatchDebugBar() {
     CATCH_DEBUG_FISH := guiObj.AddText("x0 y0 w2 h24 Background00FF9D")
     CATCH_DEBUG_BAR := guiObj.AddText("x0 y0 w2 h24 Background00C6FF")
 
-    guiObj.Show("NoActivate x160 y660 AutoSize")
+    guiObj.Show("NoActivate AutoSize")
     CATCH_DEBUG_GUI := guiObj
+    positionCatchDebugBar(CATCH_DEBUG_LAST_CATCH_MIN_X, CATCH_DEBUG_LAST_CATCH_MAX_X)
 }
 
 hideCatchDebugBar() {
@@ -146,6 +175,7 @@ mapCatchDebugX(gameX) {
 updateCatchDebugBar(catchMinX, catchMaxX, fishX, barMiddleX, leftX, rightX, note := "") {
     global CATCH_DEBUG_GUI, CATCH_DEBUG_TRACK_W, CATCH_DEBUG_MIN_X, CATCH_DEBUG_MAX_X
     global CATCH_DEBUG_BOUND_LEFT, CATCH_DEBUG_BOUND_RIGHT, CATCH_DEBUG_FISH, CATCH_DEBUG_BAR, CATCH_DEBUG_TEXT
+    global CATCH_DEBUG_LAST_CATCH_MIN_X, CATCH_DEBUG_LAST_CATCH_MAX_X
 
     showCatchDebugBar()
 
@@ -154,6 +184,9 @@ updateCatchDebugBar(catchMinX, catchMaxX, fishX, barMiddleX, leftX, rightX, note
 
     CATCH_DEBUG_MIN_X := catchMinX
     CATCH_DEBUG_MAX_X := catchMaxX
+    CATCH_DEBUG_LAST_CATCH_MIN_X := catchMinX
+    CATCH_DEBUG_LAST_CATCH_MAX_X := catchMaxX
+    positionCatchDebugBar(catchMinX, catchMaxX)
 
     trackLeft := 8
     trackTop := 24
