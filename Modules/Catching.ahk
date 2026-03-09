@@ -49,7 +49,7 @@ CATCH_SCAN_LINE_CONFIGURED := false
 CATCH_SCAN_LINE := {x1: 234, y: 513, x2: 565}
 CATCH_SCAN_AREA := {x1: 234, y1: 502, x2: 565, y2: 517}
 CATCH_SCAN_COLOR_VARIATION := 56
-CATCH_SCAN_DEBUG_ENABLED := false
+CATCH_SCAN_DEBUG_ENABLED := true
 CATCH_SCAN_COLOR_SET := ["0xEA0092", "0x7A7879", "0x000000", "0x202020"]
 
 configureCatchScanLineBeforeStart() {
@@ -218,8 +218,8 @@ catchFish() {
 
     catchMinX := CATCH_BAR_TOP_LINE.x1
     catchMaxX := CATCH_BAR_TOP_LINE.x2
-    CATCH_BAR_LEFT_X := catchMinX + (CONTROL_BAR_WIDTH * 0.70)
-    CATCH_BAR_RIGHT_X := catchMaxX - (CONTROL_BAR_WIDTH * 0.70)
+    CATCH_BAR_LEFT_X := catchMinX + (CONTROL_BAR_WIDTH * 0.30)
+    CATCH_BAR_RIGHT_X := catchMaxX - (CONTROL_BAR_WIDTH * 0.30)
 
     missingFishFrames := 0
     uiMissingFrames := 0
@@ -304,8 +304,8 @@ catchFish() {
             break
         }
 
-        CATCH_BAR_LEFT_X := catchMinX + (CONTROL_BAR_WIDTH * 0.70)
-        CATCH_BAR_RIGHT_X := catchMaxX - (CONTROL_BAR_WIDTH * 0.70)
+        CATCH_BAR_LEFT_X := catchMinX + (CONTROL_BAR_WIDTH * 0.30)
+        CATCH_BAR_RIGHT_X := catchMaxX - (CONTROL_BAR_WIDTH * 0.30)
 
         if xFish > CATCH_BAR_RIGHT_X {
             setControlDirection(state, 1)

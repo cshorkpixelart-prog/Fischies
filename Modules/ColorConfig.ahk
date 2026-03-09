@@ -314,7 +314,7 @@ applyCatchColorConfig(cfg) {
         cfg["BoxRightColor"]
     ]
     CATCH_SCAN_COLOR_VARIATION := Max(cfg["TargetLineTolerance"], cfg["IndicatorArrowTolerance"], cfg["BoxTolerance"])
-    CATCH_SCAN_DEBUG_ENABLED := StrLower(Trim(getInfoConfigValue("CatchScanDebug", "false"))) = "true"
+    CATCH_SCAN_DEBUG_ENABLED := StrLower(Trim(getInfoConfigValue("CatchScanDebug", "true"))) = "true"
 }
 
 readColorPresetFile(path) {
