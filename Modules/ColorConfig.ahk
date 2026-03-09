@@ -161,13 +161,13 @@ applyColorControls(targetEdit, targetTol, arrowEdit, arrowTol, leftEdit, rightEd
 
 savePresetFromControls(path, targetEdit, targetTol, arrowEdit, arrowTol, leftEdit, rightEdit, boxTol) {
     cfg := Map()
-    cfg["TargetLineColor"] := normalizeHexColor(targetEdit.Text, "0xEA0092")
-    cfg["TargetLineTolerance"] := normalizeTolerance(targetTol.Text, 12)
-    cfg["IndicatorArrowColor"] := normalizeHexColor(arrowEdit.Text, "0x7A7879")
-    cfg["IndicatorArrowTolerance"] := normalizeTolerance(arrowTol.Text, 10)
-    cfg["BoxLeftColor"] := normalizeHexColor(leftEdit.Text, "0xFF16A7")
-    cfg["BoxRightColor"] := normalizeHexColor(rightEdit.Text, "0xFF9CE6")
-    cfg["BoxTolerance"] := normalizeTolerance(boxTol.Text, 56)
+    cfg["TargetLineColor"] := normalizeHexColor(targetEdit.Text, "0x434B5B")
+    cfg["TargetLineTolerance"] := normalizeTolerance(targetTol.Text, 4)
+    cfg["IndicatorArrowColor"] := normalizeHexColor(arrowEdit.Text, "0x787878")
+    cfg["IndicatorArrowTolerance"] := normalizeTolerance(arrowTol.Text, 4)
+    cfg["BoxLeftColor"] := normalizeHexColor(leftEdit.Text, "0xF1F1F1")
+    cfg["BoxRightColor"] := normalizeHexColor(rightEdit.Text, "0xF1F1F1")
+    cfg["BoxTolerance"] := normalizeTolerance(boxTol.Text, 24)
     writeColorPresetFile(path, cfg)
 }
 
@@ -199,57 +199,67 @@ pickColorToControl(editControl, previewControl) {
     CoordMode("Pixel", "Screen")
     CoordMode("Mouse", "Screen")
 
-    pickerGui["title"].Text := "Color Picker"
-    pickerGui["hint"].Text := "Move mouse to target. F = freeze/unfreeze, Space/Enter = select, Esc = cancel"
+    pickerGui.title.Text := "Color Picker"
+    pickerGui.hint.Text := "Move mouse. Left click/Enter/Space = select, Right click/F = freeze, Esc = cancel"
     pickerGui.gui.Show("NoActivate x20 y20")
 
-    Loop {
-        Sleep 40
+    try {
+        Loop {
+            Sleep 25
 
-        if !isFrozen {
-            MouseGetPos(&x, &y)
-            color := PixelGetColor(x, y, "RGB")
-            updateColorPickerHud(pickerGui, x, y, color, false)
-        } else {
-            updateColorPickerHud(pickerGui, frozenX, frozenY, frozenColor, true)
-        }
-
-        if GetKeyState("Escape", "P") {
-            pickerGui.gui.Destroy()
-            CoordMode("Pixel", oldPixelMode)
-            CoordMode("Mouse", oldMouseMode)
-            return
-        }
-
-        if GetKeyState("f", "P") {
-            if isFrozen {
-                isFrozen := false
-            } else {
-                MouseGetPos(&frozenX, &frozenY)
-                frozenColor := PixelGetColor(frozenX, frozenY, "RGB")
-                isFrozen := true
-            }
-            Sleep 160
-            continue
-        }
-
-        if GetKeyState("Space", "P") || GetKeyState("Enter", "P") {
-            if isFrozen {
-                color := frozenColor
-            } else {
+            if !isFrozen {
                 MouseGetPos(&x, &y)
                 color := PixelGetColor(x, y, "RGB")
+                updateColorPickerHud(pickerGui, x, y, color, false)
+            } else {
+                updateColorPickerHud(pickerGui, frozenX, frozenY, frozenColor, true)
             }
-            hex := Format("0x{:06X}", color & 0xFFFFFF)
-            editControl.Text := hex
-            setPreviewColor(previewControl, hex)
-            break
-        }
-    }
 
-    pickerGui.gui.Destroy()
-    CoordMode("Pixel", oldPixelMode)
-    CoordMode("Mouse", oldMouseMode)
+            if GetKeyState("Escape", "P") {
+                KeyWait("Escape")
+                return
+            }
+
+            if GetKeyState("f", "P") || GetKeyState("RButton", "P") {
+                if isFrozen {
+                    isFrozen := false
+                } else {
+                    MouseGetPos(&frozenX, &frozenY)
+                    frozenColor := PixelGetColor(frozenX, frozenY, "RGB")
+                    isFrozen := true
+                }
+                if GetKeyState("f", "P")
+                    KeyWait("f")
+                if GetKeyState("RButton", "P")
+                    KeyWait("RButton")
+                continue
+            }
+
+            if GetKeyState("LButton", "P") || GetKeyState("Space", "P") || GetKeyState("Enter", "P") {
+                if isFrozen {
+                    color := frozenColor
+                } else {
+                    MouseGetPos(&x, &y)
+                    color := PixelGetColor(x, y, "RGB")
+                }
+                hex := Format("0x{:06X}", color & 0xFFFFFF)
+                editControl.Text := hex
+                setPreviewColor(previewControl, hex)
+
+                if GetKeyState("LButton", "P")
+                    KeyWait("LButton")
+                if GetKeyState("Space", "P")
+                    KeyWait("Space")
+                if GetKeyState("Enter", "P")
+                    KeyWait("Enter")
+                return
+            }
+        }
+    } finally {
+        try pickerGui.gui.Destroy()
+        CoordMode("Pixel", oldPixelMode)
+        CoordMode("Mouse", oldMouseMode)
+    }
 }
 
 createColorPickerHud() {
@@ -286,7 +296,7 @@ applyColorConfigFromPreset(path) {
 
 applyCatchColorConfig(cfg) {
     global CATCH_ARROW_COLOR, CATCH_ARROW_TOLERANCE, CALIBRATION_FISH_COLOR, CALIBRATION_FISH_TOLERANCE
-    global HEARTBEAT_MARKER_COLOR, HEARTBEAT_MARKER_TOLERANCE
+    global HEARTBEAT_MARKER_COLOR, HEARTBEAT_MARKER_TOLERANCE, CATCH_SCAN_COLOR_SET, CATCH_SCAN_COLOR_VARIATION, CATCH_SCAN_DEBUG_ENABLED
 
     CATCH_ARROW_COLOR := cfg["IndicatorArrowColor"]
     CATCH_ARROW_TOLERANCE := cfg["IndicatorArrowTolerance"]
@@ -296,6 +306,15 @@ applyCatchColorConfig(cfg) {
     ; Use the left box color as the heartbeat marker in catch bar mode.
     HEARTBEAT_MARKER_COLOR := cfg["BoxLeftColor"]
     HEARTBEAT_MARKER_TOLERANCE := cfg["BoxTolerance"]
+
+    CATCH_SCAN_COLOR_SET := [
+        cfg["TargetLineColor"],
+        cfg["IndicatorArrowColor"],
+        cfg["BoxLeftColor"],
+        cfg["BoxRightColor"]
+    ]
+    CATCH_SCAN_COLOR_VARIATION := Max(cfg["TargetLineTolerance"], cfg["IndicatorArrowTolerance"], cfg["BoxTolerance"])
+    CATCH_SCAN_DEBUG_ENABLED := StrLower(Trim(getInfoConfigValue("CatchScanDebug", "true"))) = "true"
 }
 
 readColorPresetFile(path) {
@@ -325,12 +344,12 @@ writeColorPresetFile(path, cfg) {
 
 getDefaultColorConfig() {
     cfg := Map()
-    cfg["TargetLineColor"] := "0xEA0092"
-    cfg["TargetLineTolerance"] := 12
-    cfg["IndicatorArrowColor"] := "0x7A7879"
-    cfg["IndicatorArrowTolerance"] := 10
-    cfg["BoxLeftColor"] := "0x000000"
-    cfg["BoxRightColor"] := "0x202020"
+    cfg["TargetLineColor"] := "0x434B5B"
+    cfg["TargetLineTolerance"] := 4
+    cfg["IndicatorArrowColor"] := "0x787878"
+    cfg["IndicatorArrowTolerance"] := 4
+    cfg["BoxLeftColor"] := "0xF1F1F1"
+    cfg["BoxRightColor"] := "0xF1F1F1"
     cfg["BoxTolerance"] := 24
     return cfg
 }

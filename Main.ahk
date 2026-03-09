@@ -48,6 +48,7 @@ F2::pauseMacro()
 F3::exitMacro()
 F4::openFeedbackGui()
 F5::reloadMacro()
+F7::redoDetectionSetup()
 F12::toggleSafePause()
 
 ; ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
@@ -69,8 +70,8 @@ runMacro() {
     loadColorPresetConfig()
     ;displaySettingsGui()
     ;displayMainGui()
-    resizeRobloxWindow()
-    disableResizing()
+    ensureCatchScanConfigured()
+    ensureShakeAreaConfigured()
     openSetupGuiAtRun()
     updateStatus("Finish setup in GUI, then press F1.")
     logEvent("Macro bootstrap complete.")
@@ -183,6 +184,21 @@ exitMacro(*) {
 reloadMacro(*) {
     logEvent("Reload requested (F5).", "STEP")
     Reload
+}
+
+redoDetectionSetup(*) {
+    updateStatus("Re-running detection setup...")
+    try {
+        redoCatchScanSetup()
+        redoShakeAreaSetup()
+        updateStatus("Detection setup saved.")
+        Sleep 900
+        updateStatus("Finish setup in GUI, then press F1.")
+    } catch as err {
+        errMsg := formatAhkError("Setup redo error", err)
+        logErrorCode("SETUP_REDO_EXCEPTION", errMsg)
+        updateStatus(errMsg)
+    }
 }
 
 toggleSafePause(*) {
