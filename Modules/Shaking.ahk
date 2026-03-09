@@ -209,34 +209,42 @@ getSelectedLureSpeedPercent() {
 }
 
 isCatchBarDisplayed() {
-    global CATCH_SCAN_AREA, CATCH_SCAN_LINE, CATCH_SCAN_COLOR_SET, CATCH_SCAN_COLOR_VARIATION
-    global CATCH_BAR_MIN_RUN_RATIO, CATCH_BAR_MIN_RUN_PX
+    global CATCH_SCAN_AREA, CATCH_SCAN_LINE, CATCH_SCAN_COLOR_SET, CATCH_SCAN_COLOR_VARIATION, CATCH_BAR_TOP_LINE
 
     activateRoblox()
 
-    if IsObject(CATCH_SCAN_LINE) && IsObject(CATCH_SCAN_COLOR_SET) {
-        lineWidth := Max(1, CATCH_SCAN_LINE.x2 - CATCH_SCAN_LINE.x1 + 1)
-        minRun := Max(CATCH_BAR_MIN_RUN_PX, Round(lineWidth * CATCH_BAR_MIN_RUN_RATIO))
-        if hasCatchColorRunOnLine(CATCH_SCAN_LINE.x1, CATCH_SCAN_LINE.y, CATCH_SCAN_LINE.x2, CATCH_SCAN_COLOR_SET, CATCH_SCAN_COLOR_VARIATION, minRun)
-            return true
-
-        if IsObject(CATCH_SCAN_AREA) {
-            y1 := CATCH_SCAN_AREA.y1
-            y2 := CATCH_SCAN_AREA.y2
-            while y1 <= y2 {
-                if hasCatchColorRunOnLine(CATCH_SCAN_AREA.x1, y1, CATCH_SCAN_AREA.x2, CATCH_SCAN_COLOR_SET, CATCH_SCAN_COLOR_VARIATION, minRun)
-                    return true
-                y1 += 3
-            }
-        }
-    }
-
+    ; Fast legacy point check first to avoid missing quick transitions.
     pixel := UI_CATCH_BAR_PIXEL
     if PixelSearch(&X, &Y, pixel.x, pixel.y, pixel.x, pixel.y, pixel.colour, 2)
         return true
 
-    if isCerebraRodSelected()
-        return isCerebraCatchBarDisplayedByColor()
+    ; 1px line scan using configured color set.
+    if IsObject(CATCH_SCAN_LINE) && IsObject(CATCH_SCAN_COLOR_SET) {
+        for _, target in CATCH_SCAN_COLOR_SET {
+            if PixelSearch(&foundX, &foundY, CATCH_SCAN_LINE.x1, CATCH_SCAN_LINE.y, CATCH_SCAN_LINE.x2, CATCH_SCAN_LINE.y, target, CATCH_SCAN_COLOR_VARIATION)
+                return true
+        }
+    }
+
+    ; Light area fallback (coarse stepping) for harder visual presets.
+    if IsObject(CATCH_SCAN_AREA) && IsObject(CATCH_SCAN_COLOR_SET) {
+        y := CATCH_SCAN_AREA.y1
+        while y <= CATCH_SCAN_AREA.y2 {
+            for _, target in CATCH_SCAN_COLOR_SET {
+                if PixelSearch(&fx, &fy, CATCH_SCAN_AREA.x1, y, CATCH_SCAN_AREA.x2, y, target, CATCH_SCAN_COLOR_VARIATION)
+                    return true
+            }
+            y += 4
+        }
+    }
+
+    if isCerebraRodSelected() {
+        if isCerebraCatchBarDisplayedByColor()
+            return true
+        if findFishIndicatorX(CATCH_BAR_TOP_LINE, &fishX)
+            return true
+    }
+
     return false
 }
 
