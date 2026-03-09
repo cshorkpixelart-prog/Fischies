@@ -68,7 +68,7 @@ configureCatchScanLineBeforeStart() {
     guiX := winX + CATCH_SCAN_AREA.x1
     guiY := winY + CATCH_SCAN_AREA.y1
 
-    overlay := Gui("+AlwaysOnTop +ToolWindow +Border +Resize +MinSize120x12", "Catch Scan Setup")
+    overlay := Gui("+AlwaysOnTop -Caption +ToolWindow +Border +Resize +MinSize120x12", "Catch Scan Setup")
     overlay.BackColor := "1C1230"
     overlay.MarginX := 0
     overlay.MarginY := 0

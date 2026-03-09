@@ -61,7 +61,7 @@ configureShakeAreaBeforeStart() {
     guiX := winX + SHAKE_AREA.x1
     guiY := winY + SHAKE_AREA.y1
 
-    overlay := Gui("+AlwaysOnTop +ToolWindow +Border +Resize +MinSize220x120", "Shake Scan Setup")
+    overlay := Gui("+AlwaysOnTop -Caption +ToolWindow +Border +Resize +MinSize220x120", "Shake Scan Setup")
     overlay.BackColor := "102210"
     overlay.MarginX := 0
     overlay.MarginY := 0
