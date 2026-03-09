@@ -1,8 +1,8 @@
 #Requires AutoHotkey v2.0
 
-CATCH_BAR := {x1: 234, y1: 502, x2: 565, y2: 517, xLeft: 288, xRight: 511}
-CATCH_BAR_TOP_LINE := {x1: 234, y1: 513, x2: 565, y2: 513}
-CATCH_BAR_ARROW_LINE := {x1: 234, y1: 513, x2: 565, y2: 513}
+CATCH_BAR := {x1: 249, y1: 502, x2: 551, y2: 517, xLeft: 288, xRight: 511}
+CATCH_BAR_TOP_LINE := {x1: 238, y1: 501, x2: 561, y2: 501}
+CATCH_BAR_ARROW_LINE := {x1: 239, y1: 508, x2: 560, y2: 508}
 
 LEFT_ARROW_TO_MIDDLE_OFFSET := 0
 RIGHT_ARROW_TO_MIDDLE_OFFSET := 0
@@ -218,8 +218,8 @@ catchFish() {
 
     catchMinX := CATCH_BAR_TOP_LINE.x1
     catchMaxX := CATCH_BAR_TOP_LINE.x2
-    CATCH_BAR_LEFT_X := catchMinX + (CONTROL_BAR_WIDTH * 0.30)
-    CATCH_BAR_RIGHT_X := catchMaxX - (CONTROL_BAR_WIDTH * 0.30)
+    CATCH_BAR_LEFT_X := catchMinX + (CONTROL_BAR_WIDTH * 0.70)
+    CATCH_BAR_RIGHT_X := catchMaxX - (CONTROL_BAR_WIDTH * 0.70)
 
     missingFishFrames := 0
     uiMissingFrames := 0
@@ -274,10 +274,9 @@ catchFish() {
 
         if !barMiddleX {
             staleSignalFrames += 1
-            if staleSignalFrames > 26 {
-                breakReason := "no_bar_signal"
-                break
-            }
+            if staleSignalFrames > 26
+                staleSignalFrames := 20
+            Sleep 2
             continue
         }
 
@@ -304,8 +303,8 @@ catchFish() {
             break
         }
 
-        CATCH_BAR_LEFT_X := catchMinX + (CONTROL_BAR_WIDTH * 0.30)
-        CATCH_BAR_RIGHT_X := catchMaxX - (CONTROL_BAR_WIDTH * 0.30)
+        CATCH_BAR_LEFT_X := catchMinX + (CONTROL_BAR_WIDTH * 0.70)
+        CATCH_BAR_RIGHT_X := catchMaxX - (CONTROL_BAR_WIDTH * 0.70)
 
         if xFish > CATCH_BAR_RIGHT_X {
             setControlDirection(state, 1)
@@ -799,8 +798,16 @@ clampValue(value, minValue, maxValue) {
 findFishIndicatorX(search, &xFish) {
     global CATCH_SCAN_COLOR_SET, CATCH_SCAN_COLOR_VARIATION, CALIBRATION_FISH_COLOR, CALIBRATION_FISH_TOLERANCE
 
+    ; Legacy-first path keeps white-bar behavior stable.
+    if PixelSearch(&foundX, &Y, search.x1, search.y1, search.x2, search.y2, CALIBRATION_FISH_COLOR, CALIBRATION_FISH_TOLERANCE) {
+        xFish := foundX
+        return true
+    }
+
     if IsObject(CATCH_SCAN_COLOR_SET) {
         for _, color in CATCH_SCAN_COLOR_SET {
+            if color = CALIBRATION_FISH_COLOR
+                continue
             if PixelSearch(&foundX, &Y, search.x1, search.y1, search.x2, search.y2, color, CATCH_SCAN_COLOR_VARIATION) {
                 xFish := foundX
                 return true
@@ -808,10 +815,6 @@ findFishIndicatorX(search, &xFish) {
         }
     }
 
-    if PixelSearch(&foundX, &Y, search.x1, search.y1, search.x2, search.y2, CALIBRATION_FISH_COLOR, CALIBRATION_FISH_TOLERANCE) {
-        xFish := foundX
-        return true
-    }
     return false
 }
 
@@ -826,7 +829,7 @@ getControlBarProperties(heartbeatMode := false) {
     }
 
     if PixelSearch(&X, &Y, CATCH_BAR.x1, CATCH_BAR.y1, CATCH_BAR.x2, CATCH_BAR.y2, "0xffffff", 1)
-        return {isWhite: true, x: X - CONTROL_BAR_HALF_WIDTH, source: "white", score: 0}
+        return {isWhite: true, x: X, source: "white", score: 0}
 
     return {isWhite: false, x: 0, source: "", score: 0}
 }
