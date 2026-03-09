@@ -161,13 +161,13 @@ applyColorControls(targetEdit, targetTol, arrowEdit, arrowTol, leftEdit, rightEd
 
 savePresetFromControls(path, targetEdit, targetTol, arrowEdit, arrowTol, leftEdit, rightEdit, boxTol) {
     cfg := Map()
-    cfg["TargetLineColor"] := normalizeHexColor(targetEdit.Text, "0xEA0092")
-    cfg["TargetLineTolerance"] := normalizeTolerance(targetTol.Text, 12)
-    cfg["IndicatorArrowColor"] := normalizeHexColor(arrowEdit.Text, "0x7A7879")
-    cfg["IndicatorArrowTolerance"] := normalizeTolerance(arrowTol.Text, 10)
-    cfg["BoxLeftColor"] := normalizeHexColor(leftEdit.Text, "0xFF16A7")
-    cfg["BoxRightColor"] := normalizeHexColor(rightEdit.Text, "0xFF9CE6")
-    cfg["BoxTolerance"] := normalizeTolerance(boxTol.Text, 56)
+    cfg["TargetLineColor"] := normalizeHexColor(targetEdit.Text, "0x434B5B")
+    cfg["TargetLineTolerance"] := normalizeTolerance(targetTol.Text, 4)
+    cfg["IndicatorArrowColor"] := normalizeHexColor(arrowEdit.Text, "0x787878")
+    cfg["IndicatorArrowTolerance"] := normalizeTolerance(arrowTol.Text, 4)
+    cfg["BoxLeftColor"] := normalizeHexColor(leftEdit.Text, "0xF1F1F1")
+    cfg["BoxRightColor"] := normalizeHexColor(rightEdit.Text, "0xF1F1F1")
+    cfg["BoxTolerance"] := normalizeTolerance(boxTol.Text, 24)
     writeColorPresetFile(path, cfg)
 }
 
@@ -344,12 +344,12 @@ writeColorPresetFile(path, cfg) {
 
 getDefaultColorConfig() {
     cfg := Map()
-    cfg["TargetLineColor"] := "0xEA0092"
-    cfg["TargetLineTolerance"] := 12
-    cfg["IndicatorArrowColor"] := "0x7A7879"
-    cfg["IndicatorArrowTolerance"] := 10
-    cfg["BoxLeftColor"] := "0x000000"
-    cfg["BoxRightColor"] := "0x202020"
+    cfg["TargetLineColor"] := "0x434B5B"
+    cfg["TargetLineTolerance"] := 4
+    cfg["IndicatorArrowColor"] := "0x787878"
+    cfg["IndicatorArrowTolerance"] := 4
+    cfg["BoxLeftColor"] := "0xF1F1F1"
+    cfg["BoxRightColor"] := "0xF1F1F1"
     cfg["BoxTolerance"] := 24
     return cfg
 }
