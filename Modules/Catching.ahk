@@ -230,6 +230,7 @@ catchFish() {
     breakReason := ""
 
     debugPins := createCatchScanDebugPins()
+    showCatchDebugBar()
 
     updateStatus("Catching: loop")
     Loop {
@@ -276,6 +277,7 @@ catchFish() {
             staleSignalFrames += 1
             if staleSignalFrames > 26
                 staleSignalFrames := 20
+            updateCatchDebugBar(catchMinX, catchMaxX, xFish, state.hasBar ? state.lastBarMiddleX : catchMinX, CATCH_BAR_LEFT_X, CATCH_BAR_RIGHT_X, "no-bar")
             Sleep 2
             continue
         }
@@ -321,6 +323,7 @@ catchFish() {
         centerLeftX := Round(clampValue(barMiddleX - zoneHalfWidth, catchMinX, catchMaxX))
         centerRightX := Round(clampValue(barMiddleX + zoneHalfWidth, catchMinX, catchMaxX))
         inCenterZone := (xFish >= centerLeftX && xFish <= centerRightX)
+        updateCatchDebugBar(catchMinX, catchMaxX, xFish, barMiddleX, CATCH_BAR_LEFT_X, CATCH_BAR_RIGHT_X, inCenterZone ? "CENTER" : "TRACK")
 
         predictedFishX := clampValue(xFish + (state.fishVelocity * CATCHING_LOOKAHEAD_MS), catchMinX, catchMaxX)
         positionError := predictedFishX - barMiddleX
@@ -351,6 +354,7 @@ catchFish() {
 
     releaseControl(state)
     destroyCatchScanDebugPins(debugPins)
+    hideCatchDebugBar()
     finalizeCatchLearningMetrics(learning, loopStartTick)
     if breakReason = ""
         breakReason := "loop_end"
